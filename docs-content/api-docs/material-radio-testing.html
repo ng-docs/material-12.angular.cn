@@ -1,0 +1,831 @@
+<div class="docs-api">
+  <h2 id="angular-material-radio-testing-api-参考文档">
+    Angular Material radio-testing API 参考文档
+  </h2>
+
+  <p class="docs-api-module-import">
+    <code>
+      import {MatRadioGroupHarness} from '@angular/material/radio/testing';
+    </code>
+  </p><h3 id="material-radio-testing-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="MatRadioGroupHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatRadioGroupHarness"></span>
+  <code>MatRadioGroupHarness</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">在测试中用来与标准 mat-radio-group 进行交互的测试工具。</p><p translation-origin="off">Harness for interacting with a standard mat-radio-group in tests.</p>
+
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>checkRadioButton
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Checks a radio button in this group.
+@param filter An optional filter to apply to the child radio buttons. The first tab matching
+    the filter will be selected.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">ButtonFilters</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getCheckedRadioButton
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the checked radio-button in a radio-group.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;Button | null&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getCheckedValue
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the checked value of the radio-group.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getId
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the id of the radio-group.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getName
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the name of the radio-group.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getRadioButtons
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a list of radio buttons which are part of the radio-group.
+@param filter Optionally filters which radio buttons are included.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">ButtonFilters</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;Button[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>host
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个代表该组件宿主元素的 <code>TestElement</code>  型 <code>Promise</code>。</p><p translation-origin="off">Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatRadioButtonHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatRadioButtonHarness"></span>
+  <code>MatRadioButtonHarness</code>
+  
+</h4><div class="docs-api-class-description"><p>Harness for interacting with a standard mat-radio-button in tests.</p>
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>blur
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Blurs the radio-button.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>check
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Puts the radio-button in a checked state by clicking it if it is currently unchecked,
+or doing nothing if it is already checked.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>focus
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Focuses the radio-button.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getId
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the radio-button's id.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getLabelText
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the radio-button's label text.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getName
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the radio-button's name.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getValue
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the value of the radio-button. The radio-button value will be converted to a string.</p>
+<p>Note: This means that for radio-button's with an object as a value <code>[object Object]</code> is
+intentionally returned.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>host
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个代表该组件宿主元素的 <code>TestElement</code>  型 <code>Promise</code>。</p><p translation-origin="off">Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>isChecked
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the radio-button is checked.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>isDisabled
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the radio-button is disabled.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>isFocused
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the radio-button is focused.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>isRequired
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Whether the radio-button is required.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-radio-testing-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="RadioGroupHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="RadioGroupHarnessFilters"></span>
+  <code>RadioGroupHarnessFilters</code>
+</h4><div class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatRadioGroupHarness</code> instances.</p>
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>name: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">只查找 name 属性为指定值的实例。</p><p translation-origin="off">Only find instances whose name attribute is the given value.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="RadioButtonHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="RadioButtonHarnessFilters"></span>
+  <code>RadioButtonHarnessFilters</code>
+</h4><div class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatRadioButtonHarness</code> instances.</p>
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>label: string | RegExp</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">只查找标签与指定值匹配的实例。</p><p translation-origin="off">Only find instances whose label matches the given value.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>name: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">只查找 name 属性为指定值的实例。</p><p translation-origin="off">Only find instances whose name attribute is the given value.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    </div>

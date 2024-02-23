@@ -1,0 +1,2217 @@
+<div class="docs-api">
+  <h2 id="angular-material-table-testing-api-参考文档">
+    Angular Material table-testing API 参考文档
+  </h2>
+
+  <p class="docs-api-module-import">
+    <code>
+      import {MatTableHarness} from '@angular/material/table/testing';
+    </code>
+  </p><h3 id="material-table-testing-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="MatTableHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatTableHarness"></span>
+  <code>MatTableHarness</code>
+  
+</h4><div class="docs-api-class-description"><p>Harness for interacting with a standard mat-table in tests.</p>
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getAllChildLoaders
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        selector</p>
+      <code class="docs-api-method-parameter-type">S</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getAllHarnesses
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        query</p>
+      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;T[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getCellTextByColumnName
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text inside the entire table organized by columns.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatTableHarnessColumnsText&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getCellTextByIndex
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text inside the entire table organized by rows.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string[][]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getChildLoader
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        selector</p>
+      <code class="docs-api-method-parameter-type">S</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getFooterRows
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets all of the footer rows in a table.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">RowHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;FooterRow[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getHarness
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        query</p>
+      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getHeaderRows
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets all of the header rows in a table.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">RowHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;HeaderRow[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getRows
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets all of the regular data rows in a table.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">RowHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;Row[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>host
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个代表该组件宿主元素的 <code>TestElement</code>  型 <code>Promise</code>。</p><p translation-origin="off">Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatRowHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatRowHarness"></span>
+  <code>MatRowHarness</code>
+  
+</h4><div class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material table row.</p>
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getCellTextByColumnName
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text inside the row organized by columns.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatRowHarnessColumnsText&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getCellTextByIndex
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text of the cells in the row.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">CellHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getCells
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a list of <code>MatCellHarness</code> for all cells in the row.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">CellHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;Cell[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>host
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个代表该组件宿主元素的 <code>TestElement</code>  型 <code>Promise</code>。</p><p translation-origin="off">Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatHeaderRowHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatHeaderRowHarness"></span>
+  <code>MatHeaderRowHarness</code>
+  
+</h4><div class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material table header row.</p>
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-2">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getCellTextByColumnName
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text inside the row organized by columns.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatRowHarnessColumnsText&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getCellTextByIndex
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text of the cells in the row.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">CellHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getCells
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a list of <code>MatCellHarness</code> for all cells in the row.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">CellHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;Cell[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>host
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个代表该组件宿主元素的 <code>TestElement</code>  型 <code>Promise</code>。</p><p translation-origin="off">Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatFooterRowHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatFooterRowHarness"></span>
+  <code>MatFooterRowHarness</code>
+  
+</h4><div class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material table footer row.</p>
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-3">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getCellTextByColumnName
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text inside the row organized by columns.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatRowHarnessColumnsText&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getCellTextByIndex
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the text of the cells in the row.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">CellHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getCells
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets a list of <code>MatCellHarness</code> for all cells in the row.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">CellHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;Cell[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>host
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个代表该组件宿主元素的 <code>TestElement</code>  型 <code>Promise</code>。</p><p translation-origin="off">Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatCellHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatCellHarness"></span>
+  <code>MatCellHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ContentContainerComponentHarness" class="docs-api-class-extends-type">
+      ContentContainerComponentHarness
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material table cell.</p>
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-4">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getAllChildLoaders
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        selector</p>
+      <code class="docs-api-method-parameter-type">S</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getAllHarnesses
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        query</p>
+      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;T[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getChildLoader
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        selector</p>
+      <code class="docs-api-method-parameter-type">S</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getColumnName
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the name of the column that the cell belongs to.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getHarness
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        query</p>
+      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getText
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the cell's text.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>host
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个代表该组件宿主元素的 <code>TestElement</code>  型 <code>Promise</code>。</p><p translation-origin="off">Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatHeaderCellHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatHeaderCellHarness"></span>
+  <code>MatHeaderCellHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="components/table/testing/api#MatCellHarness" class="docs-api-class-extends-type">
+      MatCellHarness
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material table header cell.</p>
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-5">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getAllChildLoaders
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        selector</p>
+      <code class="docs-api-method-parameter-type">S</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getAllHarnesses
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        query</p>
+      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;T[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getChildLoader
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        selector</p>
+      <code class="docs-api-method-parameter-type">S</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getColumnName
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the name of the column that the cell belongs to.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getHarness
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        query</p>
+      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getText
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the cell's text.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>host
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个代表该组件宿主元素的 <code>TestElement</code>  型 <code>Promise</code>。</p><p translation-origin="off">Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatFooterCellHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatFooterCellHarness"></span>
+  <code>MatFooterCellHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="components/table/testing/api#MatCellHarness" class="docs-api-class-extends-type">
+      MatCellHarness
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p>Harness for interacting with a standard Angular Material table footer cell.</p>
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-6">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getAllChildLoaders
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        selector</p>
+      <code class="docs-api-method-parameter-type">S</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getAllHarnesses
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        query</p>
+      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;T[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getChildLoader
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        selector</p>
+      <code class="docs-api-method-parameter-type">S</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getColumnName
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the name of the column that the cell belongs to.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getHarness
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        query</p>
+      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getText
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the cell's text.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>host
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个代表该组件宿主元素的 <code>TestElement</code>  型 <code>Promise</code>。</p><p translation-origin="off">Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-table-testing-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="MatTableHarnessColumnsText" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatTableHarnessColumnsText"></span>
+  <code>MatTableHarnessColumnsText</code>
+</h4><div class="docs-api-interface-description"><p>Text extracted from a table organized by columns.</p>
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-7">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">__index
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        columnName</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">{
+    text: string[];
+    headerText: string[];
+    footerText: string[];
+}</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatRowHarnessColumnsText" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="MatRowHarnessColumnsText"></span>
+  <code>MatRowHarnessColumnsText</code>
+</h4><div class="docs-api-interface-description"><p>Text extracted from a table row organized by columns.</p>
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-8">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">__index
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        columnName</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">string</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="CellHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="CellHarnessFilters"></span>
+  <code>CellHarnessFilters</code>
+</h4><div class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of cell harness instances.</p>
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>columnName: string | RegExp</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p>Only find instances whose column name matches the given value.</p>
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>text: string | RegExp</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">只查找其文本内容匹配指定值的实例。</p><p translation-origin="off">Only find instances whose text matches the given value.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="RowHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="RowHarnessFilters"></span>
+  <code>RowHarnessFilters</code>
+</h4><div class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of row harness instances.</p>
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="TableHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="TableHarnessFilters"></span>
+  <code>TableHarnessFilters</code>
+</h4><div class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of table harness instances.</p>
+</div>
+
+
+
+
+
+
+    </div>

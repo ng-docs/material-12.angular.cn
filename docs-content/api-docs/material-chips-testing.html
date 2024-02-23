@@ -1,0 +1,2181 @@
+<div class="docs-api">
+  <h2 id="angular-material-chips-testing-api-参考文档">
+    Angular Material chips-testing API 参考文档
+  </h2>
+
+  <p class="docs-api-module-import">
+    <code>
+      import {MatChipListHarness} from '@angular/material/chips/testing';
+    </code>
+  </p><h3 id="material-chips-testing-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="MatChipListHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipListHarness"></span>
+  <code>MatChipListHarness</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">在测试中与标准纸片列表进行交互的测试工具。</p><p translation-origin="off">Harness for interacting with a standard chip list in tests.</p>
+
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getChips
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取纸片列表中的纸片列表。</p><p translation-origin="off">Gets the list of chips inside the chip list.</p>
+
+<p translation-result="on">（可选项）用于过滤纸片。</p><p translation-origin="off">@param filter Optionally filters which chips are included.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">ChipHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatChipHarness[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getInput
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取纸片列表中的 <code>MatChipInput</code></p><p translation-origin="off">Gets the <code>MatChipInput</code> inside the chip list.</p>
+
+<p translation-result="on">一个可选的过滤器，用于过滤纸片。。</p><p translation-origin="off">@param filter Optionally filters which chip input is included.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">ChipInputHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatChipInputHarness&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getOrientation
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取纸片列表的方向。</p><p translation-origin="off">Gets whether the orientation of the chip list.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;'horizontal' | 'vertical'&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>host
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个代表该组件宿主元素的 <code>TestElement</code>  型 <code>Promise</code>。</p><p translation-origin="off">Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isDisabled
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取纸片列表是否被禁用。</p><p translation-origin="off">Gets whether the chip list is disabled.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isInvalid
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取纸片列表是否无效。</p><p translation-origin="off">Gets whether the chip list is invalid.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isMultiple
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取纸片列表是否处于多选模式。</p><p translation-origin="off">Gets whether the chip list is in multi selection mode.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isRequired
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取纸片列表是否必填的。</p><p translation-origin="off">Gets whether the chip list is required.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="将会在 v12.0.0 或更高版本中删除">
+            已弃用
+          </div><div class="docs-api-async-method-marker">
+          异步
+        </div>selectChips
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">选定纸片列表中的纸片。</p><p translation-origin="off">Selects a chip inside the chip list.</p>
+
+<p translation-result="on">一个可选的过滤器，适用于子纸片。所有与过滤器匹配的纸片都会被选定。</p><p translation-origin="off">@param filter An optional filter to apply to the child chips.
+   All the chips matching the filter will be selected.</p>
+
+<p>@deprecated Use <code>MatChipListboxHarness.selectChips</code> instead.
+@breaking-change 12.0.0</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">ChipHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatChipHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipHarness"></span>
+  <code>MatChipHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
+      ComponentHarness
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">在测试中与标准可选 Angular Material 纸片的测试工具。</p><p translation-origin="off">Harness for interacting with a standard selectable Angular Material chip in tests.</p>
+
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getRemoveButton
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个纸片里面的移除按钮。</p><p translation-origin="off">Gets the remove button inside of a chip.</p>
+
+<p translation-result="on">可选择过滤哪些纸片。</p><p translation-origin="off">@param filter Optionally filters which chips are included.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">ChipRemoveHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatChipRemoveHarness&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getText
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取该纸片的文本。</p><p translation-origin="off">Gets the text of the chip.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>host
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个代表该组件宿主元素的 <code>TestElement</code>  型 <code>Promise</code>。</p><p translation-origin="off">Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>isDisabled
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">纸片是否被禁用了。</p><p translation-origin="off">Whether the chip is disabled.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>remove
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">移除指定的纸片。只有它可移除时才适用。</p><p translation-origin="off">Removes the given chip. Only applies if it's removable.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="将会在 v12.0.0 或更高版本中删除">
+            已弃用
+          </div><div class="docs-api-async-method-marker">
+          异步
+        </div>deselect
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">取消选定指定的纸片。仅当它可选时才适用。</p><p translation-origin="off">Deselects the given chip. Only applies if it's selectable.</p>
+
+<p>@deprecated Use <code>MatChipOptionHarness.deselect</code> instead.
+@breaking-change 12.0.0</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="将会在 v12.0.0 或更高版本中删除">
+            已弃用
+          </div><div class="docs-api-async-method-marker">
+          异步
+        </div>isSelected
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">纸片是否被选定。</p><p translation-origin="off">Whether the chip is selected.</p>
+
+<p>@deprecated Use <code>MatChipOptionHarness.isSelected</code> instead.
+@breaking-change 12.0.0</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="将会在 v12.0.0 或更高版本中删除">
+            已弃用
+          </div><div class="docs-api-async-method-marker">
+          异步
+        </div>select
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">选定指定的纸片。仅当它可选时才适用。</p><p translation-origin="off">Selects the given chip. Only applies if it's selectable.</p>
+
+<p>@deprecated Use <code>MatChipOptionHarness.select</code> instead.
+@breaking-change 12.0.0</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-deprecated-marker" title="将会在 v12.0.0 或更高版本中删除">
+            已弃用
+          </div><div class="docs-api-async-method-marker">
+          异步
+        </div>toggle
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">切换指定纸片的选定状态。仅当它可选时才适用。</p><p translation-origin="off">Toggles the selected state of the given chip. Only applies if it's selectable.</p>
+
+<p>@deprecated Use <code>MatChipOptionHarness.toggle</code> instead.
+@breaking-change 12.0.0</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatChipInputHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipInputHarness"></span>
+  <code>MatChipInputHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
+      ComponentHarness
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">在测试中用来与标准 Material 纸片组件交互的测试工具。</p><p translation-origin="off">Harness for interacting with a standard Material chip inputs in tests.</p>
+
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-2">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>blur
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">失焦输入框并返回一个 Promise，表明该动作什么时候完成。</p><p translation-origin="off">Blurs the input and returns a promise that indicates when the
+action is complete.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>focus
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">聚焦输入框并返回一个 Promise，表明该动作何时完成。</p><p translation-origin="off">Focuses the input and returns a promise that indicates when the
+action is complete.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getPlaceholder
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取输入框的占位符。</p><p translation-origin="off">Gets the placeholder of the input.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getValue
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取输入框的值。</p><p translation-origin="off">Gets the value of the input.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>host
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个代表该组件宿主元素的 <code>TestElement</code>  型 <code>Promise</code>。</p><p translation-origin="off">Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>isDisabled
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">输入框是否被禁用。</p><p translation-origin="off">Whether the input is disabled.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>isFocused
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">输入框是否拥有焦点。</p><p translation-origin="off">Whether the input is focused.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>isRequired
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">输入框是否为必需的。</p><p translation-origin="off">Whether the input is required.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>sendSeparatorKey
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">向输入框元素发送一个纸片分隔键。</p><p translation-origin="off">Sends a chip separator key to the input element.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        key</p>
+      <code class="docs-api-method-parameter-type">string | TestKey</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>setValue
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">设置输入框的值。该值将通过模拟与指定值对应的按键进行设置。</p><p translation-origin="off">Sets the value of the input. The value will be set by simulating
+keypresses that correspond to the given value.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        newValue</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatChipRemoveHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipRemoveHarness"></span>
+  <code>MatChipRemoveHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ComponentHarness" class="docs-api-class-extends-type">
+      ComponentHarness
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">在测试过程中与标准 Material 纸片移除按钮交互的工具。</p><p translation-origin="off">Harness for interacting with a standard Material chip remove button in tests.</p>
+
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-3">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>click
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">点击“删除”按钮。</p><p translation-origin="off">Clicks the remove button.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>host
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个代表该组件宿主元素的 <code>TestElement</code>  型 <code>Promise</code>。</p><p translation-origin="off">Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatChipOptionHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipOptionHarness"></span>
+  <code>MatChipOptionHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="components/chips/testing/api#MatChipHarness" class="docs-api-class-extends-type">
+      MatChipHarness
+    </a>
+  </span>
+  
+</h4>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-4">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>deselect
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">取消选择指定的纸片。仅当它可以选择时才适用。</p><p translation-origin="off">Deselects the given chip. Only applies if it's selectable.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getRemoveButton
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个纸片里面的移除按钮。</p><p translation-origin="off">Gets the remove button inside of a chip.</p>
+
+<p translation-result="on">可选择过滤哪些纸片。</p><p translation-origin="off">@param filter Optionally filters which chips are included.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">ChipRemoveHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatChipRemoveHarness&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getText
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取该纸片的文本。</p><p translation-origin="off">Gets the text of the chip.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>host
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个代表该组件宿主元素的 <code>TestElement</code>  型 <code>Promise</code>。</p><p translation-origin="off">Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>isDisabled
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">纸片是否被禁用了。</p><p translation-origin="off">Whether the chip is disabled.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>isSelected
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">纸片是否被选定。</p><p translation-origin="off">Whether the chip is selected.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>remove
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">移除指定的纸片。只有它可移除时才适用。</p><p translation-origin="off">Removes the given chip. Only applies if it's removable.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>select
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">选择指定的纸片。仅当它可以选择时才适用。</p><p translation-origin="off">Selects the given chip. Only applies if it's selectable.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>toggle
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">切换指定纸片的选定状态。</p><p translation-origin="off">Toggles the selected state of the given chip.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    
+      
+
+<h4 id="MatChipListboxHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatChipListboxHarness"></span>
+  <code>MatChipListboxHarness</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">在测试中用来与标准可选纸片列表进行交互的测试工具。</p><p translation-origin="off">Harness for interacting with a standard selectable chip list in tests.</p>
+
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-5">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getChips
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取纸片列表中的各个纸片。</p><p translation-origin="off">Gets the list of chips inside the chip list.</p>
+
+<p translation-result="on">可选择过滤哪些纸片。</p><p translation-origin="off">@param filter Optionally filters which chips are included.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">ChipOptionHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;MatChipOptionHarness[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getOrientation
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取纸片列表的方向。</p><p translation-origin="off">Gets whether the orientation of the chip list.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;'horizontal' | 'vertical'&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>host
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个代表该组件宿主元素的 <code>TestElement</code>  型 <code>Promise</code>。</p><p translation-origin="off">Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isDisabled
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取纸片列表是否被禁用。</p><p translation-origin="off">Gets whether the chip list is disabled.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isInvalid
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取纸片列表是否无效。</p><p translation-origin="off">Gets whether the chip list is invalid.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isMultiple
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取纸片列表是否处于多选模式。</p><p translation-origin="off">Gets whether the chip list is in multi selection mode.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">isRequired
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取纸片列表是否必填的。</p><p translation-origin="off">Gets whether the chip list is required.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;boolean&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>selectChips
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">选择纸片列表中的纸片。</p><p translation-origin="off">Selects a chip inside the chip list.</p>
+
+<p translation-result="on">一个可选的过滤器，适用于子纸片。所有与过滤器匹配的纸片都会被选定。</p><p translation-origin="off">@param filter An optional filter to apply to the child chips.
+   All the chips matching the filter will be selected.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        filter</p>
+      <code class="docs-api-method-parameter-type">ChipOptionHarnessFilters = {}</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-chips-testing-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="ChipHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="ChipHarnessFilters"></span>
+  <code>ChipHarnessFilters</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">一组可以用来过滤纸片实例列表的标准。</p><p translation-origin="off">A set of criteria that can be used to filter a list of chip instances.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>text: string | RegExp</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">只查找文本与指定值匹配的实例。</p><p translation-origin="off">Only find instances whose text matches the given value.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-deprecated-marker" title="将会在 v12.0.0 或更高版本中删除">
+        已弃用
+      </div><p class="docs-api-property-name">
+      <code>selected: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">只查找选定状态与指定值匹配的纸片实例。</p><p translation-origin="off">Only find chip instances whose selected state matches the given value.</p>
+
+<p>@deprecated Use <code>MatChipOptionHarness</code> together with <code>ChipOptionHarnessFilters</code>.
+@breaking-change 12.0.0</p>
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="ChipOptionHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="ChipOptionHarnessFilters"></span>
+  <code>ChipOptionHarnessFilters</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">一组可以用来过滤可选纸片实例列表的标准。</p><p translation-origin="off">A set of criteria that can be used to filter a list of selectable chip instances.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>selected: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">只查找选定状态与指定值匹配的纸片实例。</p><p translation-origin="off">Only find chip instances whose selected state matches the given value.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="ChipListHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="ChipListHarnessFilters"></span>
+  <code>ChipListHarnessFilters</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">一组可以用来过滤纸片列表实例的标准。</p><p translation-origin="off">A set of criteria that can be used to filter chip list instances.</p>
+
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="ChipListboxHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="ChipListboxHarnessFilters"></span>
+  <code>ChipListboxHarnessFilters</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">一组可用于过滤可选纸片列表实例的准则。</p><p translation-origin="off">A set of criteria that can be used to filter selectable chip list instances.</p>
+
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="ChipInputHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="ChipInputHarnessFilters"></span>
+  <code>ChipInputHarnessFilters</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">一组标准，可以用来过滤 <code>MatChipListInputHarness</code> 实例列表。</p><p translation-origin="off">A set of criteria that can be used to filter a list of <code>MatChipListInputHarness</code> instances.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>placeholder: string | RegExp</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">根据输入的占位符文本进行过滤。</p><p translation-origin="off">Filters based on the placeholder text of the input.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>value: string | RegExp</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">根据输入值过滤。</p><p translation-origin="off">Filters based on the value of the input.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="ChipRemoveHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="ChipRemoveHarnessFilters"></span>
+  <code>ChipRemoveHarnessFilters</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">一组可以用来过滤 <code>MatChipRemoveHarness</code> 实例列表的条件。</p><p translation-origin="off">A set of criteria that can be used to filter a list of <code>MatChipRemoveHarness</code> instances.</p>
+
+</div>
+
+
+
+
+
+
+    </div>

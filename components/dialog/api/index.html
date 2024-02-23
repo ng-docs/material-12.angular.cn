@@ -1,0 +1,2188 @@
+<!DOCTYPE html><html lang="zh-Hans"><head>
+  <meta charset="utf-8">
+  <title>对话框 Dialog - Angular Material 组件库</title>
+  <link rel="canonical" href="https://material.angular.io">
+  <base href="/">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#3F50B5">
+  <meta name="description" content="UI component infrastructure and Material Design components for mobile and desktop Angular web applications.">
+  <meta name="keywords" content="angular, material design, material, angular material, web, ui, components, responsive, accessibility, typescript, css, mobile web, open source">
+  <meta name="author" content="Angular Components Team">
+
+  <!--Twitter card metadata-->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@Angular">
+  <meta name="twitter:creator" content="@Angular">
+  <meta name="twitter:title" content="Angular Material">
+  <meta name="twitter:description" content="UI component infrastructure and Material Design components for Angular web applications.">
+  <meta name="twitter:image" content="https://material.angular.io/assets/img/site-preview.png">
+
+  <!--Facebook Open Graph-->
+  <meta property="og:url" content="https://material.angular.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Angular Material">
+  <meta property="og:site_name" content="Angular Material">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:description" content="UI component infrastructure and Material Design components for Angular web applications.">
+  <meta property="og:image" content="https://material.angular.io/assets/img/site-preview.png">
+  <meta property="og:image:secure_url" content="https://material.angular.io/assets/img/site-preview.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1339">
+  <meta property="og:image:height" content="943">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png?v=8.2.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png?v=8.2.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png?v=8.2.3">
+  <link rel="manifest" href="assets/img/favicons/manifest.json?v=8.2.3">
+  <link rel="mask-icon" href="assets/img/favicons/safari-pinned-tab.svg?v=8.2.3" color="#3f51b5">
+  <link rel="shortcut icon" href="assets/img/favicons/favicon.ico?v=8.2.3">
+  <meta name="msapplication-TileColor" content="#3f51b5">
+  <meta name="msapplication-config" content="assets/img/favicons/browserconfig.xml?v=8.2.3">
+  <meta name="theme-color" content="#3f51b5">
+
+  <link href="assets/translator/css/material-icons.css" rel="stylesheet" media="all" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/translator/css/material-icons.css"></noscript>
+  <link href="assets/translator/css/material-roboto-mono.css" rel="stylesheet" media="all" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/translator/css/material-roboto-mono.css"></noscript>
+  <link href="assets/translator/css/translator.css" rel="stylesheet" media="all" onload="this.media='all'"><noscript><link rel="stylesheet" href="assets/translator/css/translator.css"></noscript>
+
+  <!--Structured Data-->
+  <script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebApplication",
+      "name": "Angular Material",
+      "description": "UI component infrastructure and Material Design components for Angular web applications.",
+      "url": "https://material.angular.io",
+      "image": "https://material.angular.io/assets/img/site-preview.png",
+      "screenshot": "https://material.angular.io/assets/img/site-preview.png",
+      "applicationCategory": "Software Documentation",
+      "operatingSystem": "Android, Chrome OS, iOS, iPadOS, macOS, OS X, Linux, Windows",
+      "author": {
+        "@type": "Organization",
+        "name": "Angular",
+        "description": "Angular is a platform for building mobile and desktop web applications. Join the community of millions of developers who build compelling user interfaces with Angular.",
+        "url": "https://angular.io",
+        "logo": "https://angular.io/assets/images/logos/angular/angular.svg"
+      }
+    }
+  </script>
+<style>body,html{height:100vh;}body{font-family:Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;margin:0;}.docs-app-background{background:#fafafa;}</style><link rel="stylesheet" href="styles.36ba723dd229ee46967f.css" media="all" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.36ba723dd229ee46967f.css"></noscript><style>material-docs-app{display:flex;flex-direction:column;height:100vh}app-navbar{position:fixed;top:0;left:0;right:0;z-index:2}material-docs-app>app-component-sidenav{flex:1}material-docs-app>router-outlet+.main-content,material-docs-app>router-outlet+app-component-sidenav{margin-top:56px;overflow-y:auto;-webkit-overflow-scrolling:touch}@media (max-width:720px){material-docs-app>router-outlet+.main-content,material-docs-app>router-outlet+app-component-sidenav{margin-top:92px;overflow-y:visible}}</style><style>.docs-navbar-header[_ngcontent-material-docs-c46]{display:flex;flex-wrap:wrap;align-items:center;padding:8px 16px}.docs-navbar-header[_ngcontent-material-docs-c46] > .mat-button[_ngcontent-material-docs-c46]:last-child{margin-left:auto}.flex-spacer[_ngcontent-material-docs-c46]{flex-grow:1}.docs-angular-logo[_ngcontent-material-docs-c46]{height:26px;margin:0 4px 3px 0;vertical-align:middle}.docs-github-logo[_ngcontent-material-docs-c46]{height:21px;margin:0 7px 2px 0;vertical-align:middle}.docs-navbar-link[_ngcontent-material-docs-c46]{text-decoration:inherit;flex:1}.docs-navbar[_ngcontent-material-docs-c46], .docs-navbar-show-small[_ngcontent-material-docs-c46]{display:none}.skip-link-wrapper[_ngcontent-material-docs-c46]{position:absolute;top:10px;left:50%;transform:translateX(-50%);border-radius:5px}@media (max-width:720px){.docs-navbar-hide-small[_ngcontent-material-docs-c46]{display:none}.docs-navbar-show-small[_ngcontent-material-docs-c46]{display:block}.docs-navbar[_ngcontent-material-docs-c46]{display:flex}.docs-navbar--github-logo[_ngcontent-material-docs-c46]{margin:0}}theme-picker[_ngcontent-material-docs-c46]{display:none}@media (min-width:328px){theme-picker[_ngcontent-material-docs-c46]{display:block}}</style><style>.mat-button .mat-button-focus-overlay,.mat-icon-button .mat-button-focus-overlay{opacity:0}.mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay,.mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay{opacity:.04}@media(hover: none){.mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay,.mat-stroked-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay{opacity:0}}.mat-button,.mat-icon-button,.mat-stroked-button,.mat-flat-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible}.mat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner{border:0}.mat-button.mat-button-disabled,.mat-icon-button.mat-button-disabled,.mat-stroked-button.mat-button-disabled,.mat-flat-button.mat-button-disabled{cursor:default}.mat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-button.cdk-program-focused .mat-button-focus-overlay,.mat-icon-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-icon-button.cdk-program-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-stroked-button.cdk-program-focused .mat-button-focus-overlay,.mat-flat-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-flat-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-button::-moz-focus-inner,.mat-icon-button::-moz-focus-inner,.mat-stroked-button::-moz-focus-inner,.mat-flat-button::-moz-focus-inner{border:0}.mat-raised-button{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1)}.mat-raised-button::-moz-focus-inner{border:0}.mat-raised-button.mat-button-disabled{cursor:default}.mat-raised-button.cdk-keyboard-focused .mat-button-focus-overlay,.mat-raised-button.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-raised-button::-moz-focus-inner{border:0}._mat-animation-noopable.mat-raised-button{transition:none;animation:none}.mat-stroked-button{border:1px solid currentColor;padding:0 15px;line-height:34px}.mat-stroked-button .mat-button-ripple.mat-ripple,.mat-stroked-button .mat-button-focus-overlay{top:-1px;left:-1px;right:-1px;bottom:-1px}.mat-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);min-width:0;border-radius:50%;width:56px;height:56px;padding:0;flex-shrink:0}.mat-fab::-moz-focus-inner{border:0}.mat-fab.mat-button-disabled{cursor:default}.mat-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-fab{transition:none;animation:none}.mat-fab .mat-button-wrapper{padding:16px 0;display:inline-block;line-height:24px}.mat-mini-fab{box-sizing:border-box;position:relative;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;display:inline-block;white-space:nowrap;text-decoration:none;vertical-align:baseline;text-align:center;margin:0;min-width:64px;line-height:36px;padding:0 16px;border-radius:4px;overflow:visible;transform:translate3d(0, 0, 0);transition:background 400ms cubic-bezier(0.25, 0.8, 0.25, 1),box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1);min-width:0;border-radius:50%;width:40px;height:40px;padding:0;flex-shrink:0}.mat-mini-fab::-moz-focus-inner{border:0}.mat-mini-fab.mat-button-disabled{cursor:default}.mat-mini-fab.cdk-keyboard-focused .mat-button-focus-overlay,.mat-mini-fab.cdk-program-focused .mat-button-focus-overlay{opacity:.12}.mat-mini-fab::-moz-focus-inner{border:0}._mat-animation-noopable.mat-mini-fab{transition:none;animation:none}.mat-mini-fab .mat-button-wrapper{padding:8px 0;display:inline-block;line-height:24px}.mat-icon-button{padding:0;min-width:0;width:40px;height:40px;flex-shrink:0;line-height:40px;border-radius:50%}.mat-icon-button i,.mat-icon-button .mat-icon{line-height:24px}.mat-button-ripple.mat-ripple,.mat-button-focus-overlay{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none;border-radius:inherit}.mat-button-ripple.mat-ripple:not(:empty){transform:translateZ(0)}.mat-button-focus-overlay{opacity:0;transition:opacity 200ms cubic-bezier(0.35, 0, 0.25, 1),background-color 200ms cubic-bezier(0.35, 0, 0.25, 1)}._mat-animation-noopable .mat-button-focus-overlay{transition:none}.mat-button-ripple-round{border-radius:50%;z-index:1}.mat-button .mat-button-wrapper>*,.mat-flat-button .mat-button-wrapper>*,.mat-stroked-button .mat-button-wrapper>*,.mat-raised-button .mat-button-wrapper>*,.mat-icon-button .mat-button-wrapper>*,.mat-fab .mat-button-wrapper>*,.mat-mini-fab .mat-button-wrapper>*{vertical-align:middle}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button{display:inline-flex;justify-content:center;align-items:center;font-size:inherit;width:2.5em;height:2.5em}.cdk-high-contrast-active .mat-button,.cdk-high-contrast-active .mat-flat-button,.cdk-high-contrast-active .mat-raised-button,.cdk-high-contrast-active .mat-icon-button,.cdk-high-contrast-active .mat-fab,.cdk-high-contrast-active .mat-mini-fab{outline:solid 1px}.cdk-high-contrast-active .mat-button-base.cdk-keyboard-focused,.cdk-high-contrast-active .mat-button-base.cdk-program-focused{outline:solid 3px}
+</style><style>.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon{margin-right:0;margin-left:8px;float:right}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon svg{vertical-align:middle}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.deeppurple-amber svg .docs-theme-icon-background{fill:#fafafa}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.deeppurple-amber svg .docs-theme-icon-button{fill:#ffc107}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.deeppurple-amber svg .docs-theme-icon-toolbar{fill:#673ab7}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.indigo-pink svg .docs-theme-icon-background{fill:#fafafa}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.indigo-pink svg .docs-theme-icon-button{fill:#e91e63}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.indigo-pink svg .docs-theme-icon-toolbar{fill:#3f51b5}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.pink-bluegrey svg .docs-theme-icon-background{fill:#303030}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.pink-bluegrey svg .docs-theme-icon-button{fill:#607d8b}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.pink-bluegrey svg .docs-theme-icon-toolbar{fill:#e91e63}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.purple-green svg .docs-theme-icon-background{fill:#303030}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.purple-green svg .docs-theme-icon-button{fill:#4caf50}.docs-theme-picker-menu .mat-menu-item .mat-icon.theme-example-icon.purple-green svg .docs-theme-icon-toolbar{fill:#9c27b0}</style><style>.mat-icon{background-repeat:no-repeat;display:inline-block;fill:currentColor;height:24px;width:24px}.mat-icon.mat-icon-inline{font-size:inherit;height:inherit;line-height:inherit;width:inherit}[dir=rtl] .mat-icon-rtl-mirror{transform:scale(-1, 1)}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon{display:block}.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-prefix .mat-icon-button .mat-icon,.mat-form-field:not(.mat-form-field-appearance-legacy) .mat-form-field-suffix .mat-icon-button .mat-icon{margin:auto}
+</style><style>mat-menu{display:none}.mat-menu-panel{min-width:112px;max-width:280px;overflow:auto;-webkit-overflow-scrolling:touch;max-height:calc(100vh - 48px);border-radius:4px;outline:0;min-height:64px}.mat-menu-panel.ng-animating{pointer-events:none}.cdk-high-contrast-active .mat-menu-panel{outline:solid 1px}.mat-menu-content:not(:empty){padding-top:8px;padding-bottom:8px}.mat-menu-item{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:pointer;outline:none;border:none;-webkit-tap-highlight-color:transparent;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;line-height:48px;height:48px;padding:0 16px;text-align:left;text-decoration:none;max-width:100%;position:relative}.mat-menu-item::-moz-focus-inner{border:0}.mat-menu-item[disabled]{cursor:default}[dir=rtl] .mat-menu-item{text-align:right}.mat-menu-item .mat-icon{margin-right:16px;vertical-align:middle}.mat-menu-item .mat-icon svg{vertical-align:top}[dir=rtl] .mat-menu-item .mat-icon{margin-left:16px;margin-right:0}.mat-menu-item[disabled]{pointer-events:none}.cdk-high-contrast-active .mat-menu-item{margin-top:1px}.cdk-high-contrast-active .mat-menu-item.cdk-program-focused,.cdk-high-contrast-active .mat-menu-item.cdk-keyboard-focused,.cdk-high-contrast-active .mat-menu-item-highlighted{outline:dotted 1px}.mat-menu-item-submenu-trigger{padding-right:32px}.mat-menu-item-submenu-trigger::after{width:0;height:0;border-style:solid;border-width:5px 0 5px 5px;border-color:transparent transparent transparent currentColor;content:"";display:inline-block;position:absolute;top:50%;right:16px;transform:translateY(-50%)}[dir=rtl] .mat-menu-item-submenu-trigger{padding-right:16px;padding-left:32px}[dir=rtl] .mat-menu-item-submenu-trigger::after{right:auto;left:16px;transform:rotateY(180deg) translateY(-50%)}button.mat-menu-item{width:100%}.mat-menu-item .mat-menu-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}
+</style><style>app-component-sidenav{display:flex;flex-direction:column;overflow:auto}.docs-component-viewer-sidenav-container{flex:1;box-sizing:border-box}.docs-component-viewer-sidenav{overflow:auto}.docs-component-sidenav-inner-content{flex-direction:row}.mat-drawer::-webkit-scrollbar{height:4px;width:4px}.docs-component-viewer-nav{position:sticky;top:0}.docs-component-viewer-nav .docs-component-viewer-nav-content{width:240px;height:calc(100vh - 56px);overflow:auto}.docs-component-viewer-nav .docs-component-viewer-nav-content::-webkit-scrollbar{height:4px;width:4px}.docs-component-viewer-nav .docs-component-viewer-nav-content ul{list-style-type:none;margin:0 0 5px;padding:0;overflow:hidden}.docs-component-viewer-nav .docs-component-viewer-nav-content li{font-size:13px;line-height:16px;margin:0;padding:5px 15px 5px 20px}.docs-component-viewer-nav .docs-component-viewer-nav-content a{display:block;text-decoration:none}.docs-component-sidenav-content{display:flex;flex-direction:column;min-height:100%}.docs-component-sidenav-inner-content{display:flex;flex-direction:column;flex:1}.docs-component-sidenav-body-content{display:flex;flex:1 1 auto}div .mat-list-base{padding-top:0}div.docs-component-viewer-nav-content .mat-nav-list .mat-list-item .mat-list-item-content{padding-left:25px}@media (max-width:959px){.docs-component-viewer-sidenav-container .docs-component-viewer-sidenav{z-index:4}.docs-component-viewer-nav{position:relative;top:0}.docs-component-viewer-nav .docs-component-viewer-nav-content{box-sizing:border-box;margin:0;max-height:none}}@media (max-width:720px){.docs-component-viewer-sidenav-container{flex:1 0 auto}.docs-component-sidenav-body-content{flex-direction:column}}</style><style>.mat-drawer-container{position:relative;z-index:1;box-sizing:border-box;-webkit-overflow-scrolling:touch;display:block;overflow:hidden}.mat-drawer-container[fullscreen]{top:0;left:0;right:0;bottom:0;position:absolute}.mat-drawer-container[fullscreen].mat-drawer-container-has-open{overflow:hidden}.mat-drawer-container.mat-drawer-container-explicit-backdrop .mat-drawer-side{z-index:3}.mat-drawer-container.ng-animate-disabled .mat-drawer-backdrop,.mat-drawer-container.ng-animate-disabled .mat-drawer-content,.ng-animate-disabled .mat-drawer-container .mat-drawer-backdrop,.ng-animate-disabled .mat-drawer-container .mat-drawer-content{transition:none}.mat-drawer-backdrop{top:0;left:0;right:0;bottom:0;position:absolute;display:block;z-index:3;visibility:hidden}.mat-drawer-backdrop.mat-drawer-shown{visibility:visible}.mat-drawer-transition .mat-drawer-backdrop{transition-duration:400ms;transition-timing-function:cubic-bezier(0.25, 0.8, 0.25, 1);transition-property:background-color,visibility}.cdk-high-contrast-active .mat-drawer-backdrop{opacity:.5}.mat-drawer-content{position:relative;z-index:1;display:block;height:100%;overflow:auto}.mat-drawer-transition .mat-drawer-content{transition-duration:400ms;transition-timing-function:cubic-bezier(0.25, 0.8, 0.25, 1);transition-property:transform,margin-left,margin-right}.mat-drawer{position:relative;z-index:4;display:block;position:absolute;top:0;bottom:0;z-index:3;outline:0;box-sizing:border-box;overflow-y:auto;transform:translate3d(-100%, 0, 0)}.cdk-high-contrast-active .mat-drawer,.cdk-high-contrast-active [dir=rtl] .mat-drawer.mat-drawer-end{border-right:solid 1px currentColor}.cdk-high-contrast-active [dir=rtl] .mat-drawer,.cdk-high-contrast-active .mat-drawer.mat-drawer-end{border-left:solid 1px currentColor;border-right:none}.mat-drawer.mat-drawer-side{z-index:2}.mat-drawer.mat-drawer-end{right:0;transform:translate3d(100%, 0, 0)}[dir=rtl] .mat-drawer{transform:translate3d(100%, 0, 0)}[dir=rtl] .mat-drawer.mat-drawer-end{left:0;right:auto;transform:translate3d(-100%, 0, 0)}.mat-drawer-inner-container{width:100%;height:100%;overflow:auto;-webkit-overflow-scrolling:touch}.mat-sidenav-fixed{position:fixed}
+</style><style>.component-page-header[_ngcontent-material-docs-c123]{display:flex;align-items:center}@media (max-width:959px){.component-page-header[_ngcontent-material-docs-c123]{padding-left:0}}h1[_ngcontent-material-docs-c123]{outline:none}@media (max-width:959px){h1[_ngcontent-material-docs-c123]{padding:24px 8px;font-size:20px}}.sidenav-toggle[_ngcontent-material-docs-c123]{padding:0;margin:8px;min-width:64px;display:none}@media (max-width:959px){.sidenav-toggle[_ngcontent-material-docs-c123]{display:flex;align-items:center;justify-content:center}}.sidenav-toggle[_ngcontent-material-docs-c123]   mat-icon[_ngcontent-material-docs-c123]{font-size:30px;height:64px;width:64px;line-height:64px;color:#fff}</style><style>.docs-footer[_ngcontent-material-docs-c112]{padding:12px;font-size:12px}.docs-footer-list[_ngcontent-material-docs-c112]{align-items:center;display:flex;flex-flow:row wrap;padding:8px}.docs-footer-logo[_ngcontent-material-docs-c112]{flex:1}.docs-footer-angular-logo[_ngcontent-material-docs-c112]{height:50px}.docs-footer-version[_ngcontent-material-docs-c112]{display:flex;justify-content:center;align-items:center;flex:1}.docs-footer-version[_ngcontent-material-docs-c112]   .angular-material-logo[_ngcontent-material-docs-c112]{height:40px;margin:10px 0 10px 16px}.docs-footer-version[_ngcontent-material-docs-c112]   .version[_ngcontent-material-docs-c112]{margin:0 40px}.docs-footer-copyright[_ngcontent-material-docs-c112]{display:flex;flex:1;justify-content:flex-end;flex-direction:column;min-width:225px;margin-top:16px}.docs-footer-copyright[_ngcontent-material-docs-c112] > div[_ngcontent-material-docs-c112]{display:flex;flex-direction:column;align-self:flex-end;text-align:center}@media (min-width:885px){.docs-footer-copyright[_ngcontent-material-docs-c112]{margin-top:0}}.docs-footer-logo[_ngcontent-material-docs-c112]   span[_ngcontent-material-docs-c112]{display:inline-block;line-height:50px;margin:0 40px;vertical-align:bottom}.docs-footer-logo[_ngcontent-material-docs-c112]   span[_ngcontent-material-docs-c112]   a[_ngcontent-material-docs-c112]{font-size:16px;padding:0}a[_ngcontent-material-docs-c112]{text-decoration:none;color:inherit}a[_ngcontent-material-docs-c112]:focus, a[_ngcontent-material-docs-c112]:hover{text-decoration:underline}@media screen and (max-width:884px){.docs-footer-list[_ngcontent-material-docs-c112]{flex-direction:column}}</style><style>app-component-viewer{font-weight:400;width:calc(100% - 241px - 100px);padding:20px 50px}@media (max-width:959px){app-component-viewer{width:calc(100% - 100px)}}@media (max-width:599px){app-component-viewer{width:calc(100% - 30px);padding-left:15px;padding-right:15px}}.docs-component-viewer-section-tab{text-transform:uppercase}.docs-component-viewer-tabbed-content{margin-bottom:25px}.docs-component-viewer-content{position:relative;min-height:500px}.docs-component-viewer-content component-api,.docs-component-viewer-content component-overview{display:flex;align-items:flex-start;overflow:visible}@media (max-width:959px){.docs-component-viewer-content component-api,.docs-component-viewer-content component-overview{flex-direction:column}}.docs-component-viewer-content table-of-contents{top:35px;position:sticky}@media (max-width:959px){.docs-component-viewer-content table-of-contents{order:-1;position:inherit;width:auto;padding-left:0}}.docs-component-view-text-content{flex-grow:1;width:100%}.docs-component-api,.docs-component-overview{width:80%}@media (max-width:959px){.docs-component-api,.docs-component-overview{width:100%;margin-right:0}}</style><style>.mat-tab-header{display:flex;overflow:hidden;position:relative;flex-shrink:0}.mat-tab-header-pagination{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;position:relative;display:none;justify-content:center;align-items:center;min-width:32px;cursor:pointer;z-index:2;-webkit-tap-highlight-color:transparent;touch-action:none}.mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination{display:flex}.mat-tab-header-pagination-before,.mat-tab-header-rtl .mat-tab-header-pagination-after{padding-left:4px}.mat-tab-header-pagination-before .mat-tab-header-pagination-chevron,.mat-tab-header-rtl .mat-tab-header-pagination-after .mat-tab-header-pagination-chevron{transform:rotate(-135deg)}.mat-tab-header-rtl .mat-tab-header-pagination-before,.mat-tab-header-pagination-after{padding-right:4px}.mat-tab-header-rtl .mat-tab-header-pagination-before .mat-tab-header-pagination-chevron,.mat-tab-header-pagination-after .mat-tab-header-pagination-chevron{transform:rotate(45deg)}.mat-tab-header-pagination-chevron{border-style:solid;border-width:2px 2px 0 0;content:"";height:8px;width:8px}.mat-tab-header-pagination-disabled{box-shadow:none;cursor:default}.mat-tab-list{flex-grow:1;position:relative;transition:transform 500ms cubic-bezier(0.35, 0, 0.25, 1)}.mat-tab-links{display:flex}[mat-align-tabs=center]>.mat-tab-link-container .mat-tab-links{justify-content:center}[mat-align-tabs=end]>.mat-tab-link-container .mat-tab-links{justify-content:flex-end}.mat-ink-bar{position:absolute;bottom:0;height:2px;transition:500ms cubic-bezier(0.35, 0, 0.25, 1)}._mat-animation-noopable.mat-ink-bar{transition:none;animation:none}.mat-tab-group-inverted-header .mat-ink-bar{bottom:auto;top:0}.cdk-high-contrast-active .mat-ink-bar{outline:solid 2px;height:0}.mat-tab-link-container{display:flex;flex-grow:1;overflow:hidden;z-index:1}.mat-tab-link{height:48px;padding:0 24px;cursor:pointer;box-sizing:border-box;opacity:.6;min-width:160px;text-align:center;display:inline-flex;justify-content:center;align-items:center;white-space:nowrap;vertical-align:top;text-decoration:none;position:relative;overflow:hidden;-webkit-tap-highlight-color:transparent}.mat-tab-link:focus{outline:none}.mat-tab-link:focus:not(.mat-tab-disabled){opacity:1}.cdk-high-contrast-active .mat-tab-link:focus{outline:dotted 2px;outline-offset:-2px}.mat-tab-link.mat-tab-disabled{cursor:default}.cdk-high-contrast-active .mat-tab-link.mat-tab-disabled{opacity:.5}.mat-tab-link .mat-tab-label-content{display:inline-flex;justify-content:center;align-items:center;white-space:nowrap}.cdk-high-contrast-active .mat-tab-link{opacity:1}[mat-stretch-tabs] .mat-tab-link{flex-basis:0;flex-grow:1}.mat-tab-link.mat-tab-disabled{pointer-events:none}@media(max-width: 599px){.mat-tab-link{min-width:72px}}
+</style><style>.docs-api-class-name{margin-top:28px;margin-bottom:0;display:block;font-weight:700;font-size:20px;background:none}.docs-api-class-name code{background:none}@media (max-width:399px){.docs-api-class-name,.docs-api-type-alias-name{word-break:break-word}}.docs-api-h3{font-weight:300;font-size:24px;line-height:32px;margin:40px 0 20px;padding-bottom:3px}.docs-api-class-description,.docs-api-class-export-label,.docs-api-class-export-name,.docs-api-directive-selectors,.docs-api-method-description-cell,.docs-api-method-header,.docs-api-method-name-cell,.docs-api-property-description{font-size:15px}.docs-api-class-description{line-height:24px}.docs-api-property-type{font-weight:700;font-size:14px;margin-top:5px}</style><style>.mat-subheader{display:flex;box-sizing:border-box;padding:16px;align-items:center}.mat-list-base .mat-subheader{margin:0}.mat-list-base{padding-top:8px;display:block;-webkit-tap-highlight-color:transparent}.mat-list-base .mat-subheader{height:48px;line-height:16px}.mat-list-base .mat-subheader:first-child{margin-top:-8px}.mat-list-base .mat-list-item,.mat-list-base .mat-list-option{display:block;height:48px;-webkit-tap-highlight-color:transparent;width:100%;padding:0}.mat-list-base .mat-list-item .mat-list-item-content,.mat-list-base .mat-list-option .mat-list-item-content{display:flex;flex-direction:row;align-items:center;box-sizing:border-box;padding:0 16px;position:relative;height:inherit}.mat-list-base .mat-list-item .mat-list-item-content-reverse,.mat-list-base .mat-list-option .mat-list-item-content-reverse{display:flex;align-items:center;padding:0 16px;flex-direction:row-reverse;justify-content:space-around}.mat-list-base .mat-list-item .mat-list-item-ripple,.mat-list-base .mat-list-option .mat-list-item-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}.mat-list-base .mat-list-item.mat-list-item-with-avatar,.mat-list-base .mat-list-option.mat-list-item-with-avatar{height:56px}.mat-list-base .mat-list-item.mat-2-line,.mat-list-base .mat-list-option.mat-2-line{height:72px}.mat-list-base .mat-list-item.mat-3-line,.mat-list-base .mat-list-option.mat-3-line{height:88px}.mat-list-base .mat-list-item.mat-multi-line,.mat-list-base .mat-list-option.mat-multi-line{height:auto}.mat-list-base .mat-list-item.mat-multi-line .mat-list-item-content,.mat-list-base .mat-list-option.mat-multi-line .mat-list-item-content{padding-top:16px;padding-bottom:16px}.mat-list-base .mat-list-item .mat-list-text,.mat-list-base .mat-list-option .mat-list-text{display:flex;flex-direction:column;flex:auto;box-sizing:border-box;overflow:hidden;padding:0}.mat-list-base .mat-list-item .mat-list-text>*,.mat-list-base .mat-list-option .mat-list-text>*{margin:0;padding:0;font-weight:normal;font-size:inherit}.mat-list-base .mat-list-item .mat-list-text:empty,.mat-list-base .mat-list-option .mat-list-text:empty{display:none}.mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,.mat-list-base .mat-list-item.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base .mat-list-option.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,.mat-list-base .mat-list-option.mat-list-option .mat-list-item-content .mat-list-text{padding-right:0;padding-left:16px}[dir=rtl] .mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base .mat-list-item.mat-list-option .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base .mat-list-option.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base .mat-list-option.mat-list-option .mat-list-item-content .mat-list-text{padding-right:16px;padding-left:0}.mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,.mat-list-base .mat-list-item.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base .mat-list-option.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,.mat-list-base .mat-list-option.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-left:0;padding-right:16px}[dir=rtl] .mat-list-base .mat-list-item.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base .mat-list-item.mat-list-option .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base .mat-list-option.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base .mat-list-option.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-right:0;padding-left:16px}.mat-list-base .mat-list-item.mat-list-item-with-avatar.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base .mat-list-item.mat-list-item-with-avatar.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base .mat-list-option.mat-list-item-with-avatar.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base .mat-list-option.mat-list-item-with-avatar.mat-list-option .mat-list-item-content .mat-list-text{padding-right:16px;padding-left:16px}.mat-list-base .mat-list-item .mat-list-avatar,.mat-list-base .mat-list-option .mat-list-avatar{flex-shrink:0;width:40px;height:40px;border-radius:50%;object-fit:cover}.mat-list-base .mat-list-item .mat-list-avatar~.mat-divider-inset,.mat-list-base .mat-list-option .mat-list-avatar~.mat-divider-inset{margin-left:72px;width:calc(100% - 72px)}[dir=rtl] .mat-list-base .mat-list-item .mat-list-avatar~.mat-divider-inset,[dir=rtl] .mat-list-base .mat-list-option .mat-list-avatar~.mat-divider-inset{margin-left:auto;margin-right:72px}.mat-list-base .mat-list-item .mat-list-icon,.mat-list-base .mat-list-option .mat-list-icon{flex-shrink:0;width:24px;height:24px;font-size:24px;box-sizing:content-box;border-radius:50%;padding:4px}.mat-list-base .mat-list-item .mat-list-icon~.mat-divider-inset,.mat-list-base .mat-list-option .mat-list-icon~.mat-divider-inset{margin-left:64px;width:calc(100% - 64px)}[dir=rtl] .mat-list-base .mat-list-item .mat-list-icon~.mat-divider-inset,[dir=rtl] .mat-list-base .mat-list-option .mat-list-icon~.mat-divider-inset{margin-left:auto;margin-right:64px}.mat-list-base .mat-list-item .mat-divider,.mat-list-base .mat-list-option .mat-divider{position:absolute;bottom:0;left:0;width:100%;margin:0}[dir=rtl] .mat-list-base .mat-list-item .mat-divider,[dir=rtl] .mat-list-base .mat-list-option .mat-divider{margin-left:auto;margin-right:0}.mat-list-base .mat-list-item .mat-divider.mat-divider-inset,.mat-list-base .mat-list-option .mat-divider.mat-divider-inset{position:absolute}.mat-list-base[dense]{padding-top:4px;display:block}.mat-list-base[dense] .mat-subheader{height:40px;line-height:8px}.mat-list-base[dense] .mat-subheader:first-child{margin-top:-4px}.mat-list-base[dense] .mat-list-item,.mat-list-base[dense] .mat-list-option{display:block;height:40px;-webkit-tap-highlight-color:transparent;width:100%;padding:0}.mat-list-base[dense] .mat-list-item .mat-list-item-content,.mat-list-base[dense] .mat-list-option .mat-list-item-content{display:flex;flex-direction:row;align-items:center;box-sizing:border-box;padding:0 16px;position:relative;height:inherit}.mat-list-base[dense] .mat-list-item .mat-list-item-content-reverse,.mat-list-base[dense] .mat-list-option .mat-list-item-content-reverse{display:flex;align-items:center;padding:0 16px;flex-direction:row-reverse;justify-content:space-around}.mat-list-base[dense] .mat-list-item .mat-list-item-ripple,.mat-list-base[dense] .mat-list-option .mat-list-item-ripple{top:0;left:0;right:0;bottom:0;position:absolute;pointer-events:none}.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar{height:48px}.mat-list-base[dense] .mat-list-item.mat-2-line,.mat-list-base[dense] .mat-list-option.mat-2-line{height:60px}.mat-list-base[dense] .mat-list-item.mat-3-line,.mat-list-base[dense] .mat-list-option.mat-3-line{height:76px}.mat-list-base[dense] .mat-list-item.mat-multi-line,.mat-list-base[dense] .mat-list-option.mat-multi-line{height:auto}.mat-list-base[dense] .mat-list-item.mat-multi-line .mat-list-item-content,.mat-list-base[dense] .mat-list-option.mat-multi-line .mat-list-item-content{padding-top:16px;padding-bottom:16px}.mat-list-base[dense] .mat-list-item .mat-list-text,.mat-list-base[dense] .mat-list-option .mat-list-text{display:flex;flex-direction:column;flex:auto;box-sizing:border-box;overflow:hidden;padding:0}.mat-list-base[dense] .mat-list-item .mat-list-text>*,.mat-list-base[dense] .mat-list-option .mat-list-text>*{margin:0;padding:0;font-weight:normal;font-size:inherit}.mat-list-base[dense] .mat-list-item .mat-list-text:empty,.mat-list-base[dense] .mat-list-option .mat-list-text:empty{display:none}.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,.mat-list-base[dense] .mat-list-item.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-option .mat-list-item-content .mat-list-text{padding-right:0;padding-left:16px}[dir=rtl] .mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-item.mat-list-option .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar .mat-list-item-content .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-option.mat-list-option .mat-list-item-content .mat-list-text{padding-right:16px;padding-left:0}.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,.mat-list-base[dense] .mat-list-item.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-left:0;padding-right:16px}[dir=rtl] .mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-item.mat-list-option .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar .mat-list-item-content-reverse .mat-list-text,[dir=rtl] .mat-list-base[dense] .mat-list-option.mat-list-option .mat-list-item-content-reverse .mat-list-text{padding-right:0;padding-left:16px}.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base[dense] .mat-list-item.mat-list-item-with-avatar.mat-list-option .mat-list-item-content .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar.mat-list-option .mat-list-item-content-reverse .mat-list-text,.mat-list-base[dense] .mat-list-option.mat-list-item-with-avatar.mat-list-option .mat-list-item-content .mat-list-text{padding-right:16px;padding-left:16px}.mat-list-base[dense] .mat-list-item .mat-list-avatar,.mat-list-base[dense] .mat-list-option .mat-list-avatar{flex-shrink:0;width:36px;height:36px;border-radius:50%;object-fit:cover}.mat-list-base[dense] .mat-list-item .mat-list-avatar~.mat-divider-inset,.mat-list-base[dense] .mat-list-option .mat-list-avatar~.mat-divider-inset{margin-left:68px;width:calc(100% - 68px)}[dir=rtl] .mat-list-base[dense] .mat-list-item .mat-list-avatar~.mat-divider-inset,[dir=rtl] .mat-list-base[dense] .mat-list-option .mat-list-avatar~.mat-divider-inset{margin-left:auto;margin-right:68px}.mat-list-base[dense] .mat-list-item .mat-list-icon,.mat-list-base[dense] .mat-list-option .mat-list-icon{flex-shrink:0;width:20px;height:20px;font-size:20px;box-sizing:content-box;border-radius:50%;padding:4px}.mat-list-base[dense] .mat-list-item .mat-list-icon~.mat-divider-inset,.mat-list-base[dense] .mat-list-option .mat-list-icon~.mat-divider-inset{margin-left:60px;width:calc(100% - 60px)}[dir=rtl] .mat-list-base[dense] .mat-list-item .mat-list-icon~.mat-divider-inset,[dir=rtl] .mat-list-base[dense] .mat-list-option .mat-list-icon~.mat-divider-inset{margin-left:auto;margin-right:60px}.mat-list-base[dense] .mat-list-item .mat-divider,.mat-list-base[dense] .mat-list-option .mat-divider{position:absolute;bottom:0;left:0;width:100%;margin:0}[dir=rtl] .mat-list-base[dense] .mat-list-item .mat-divider,[dir=rtl] .mat-list-base[dense] .mat-list-option .mat-divider{margin-left:auto;margin-right:0}.mat-list-base[dense] .mat-list-item .mat-divider.mat-divider-inset,.mat-list-base[dense] .mat-list-option .mat-divider.mat-divider-inset{position:absolute}.mat-nav-list a{text-decoration:none;color:inherit}.mat-nav-list .mat-list-item{cursor:pointer;outline:none}mat-action-list button{background:none;color:inherit;border:none;font:inherit;outline:inherit;-webkit-tap-highlight-color:transparent;text-align:left}[dir=rtl] mat-action-list button{text-align:right}mat-action-list button::-moz-focus-inner{border:0}mat-action-list .mat-list-item{cursor:pointer;outline:inherit}.mat-list-option:not(.mat-list-item-disabled){cursor:pointer;outline:none}.mat-list-item-disabled{pointer-events:none}.cdk-high-contrast-active .mat-list-item-disabled{opacity:.5}.cdk-high-contrast-active :host .mat-list-item-disabled{opacity:.5}.cdk-high-contrast-active .mat-selection-list:focus{outline-style:dotted}.cdk-high-contrast-active .mat-list-option:hover,.cdk-high-contrast-active .mat-list-option:focus,.cdk-high-contrast-active .mat-nav-list .mat-list-item:hover,.cdk-high-contrast-active .mat-nav-list .mat-list-item:focus,.cdk-high-contrast-active mat-action-list .mat-list-item:hover,.cdk-high-contrast-active mat-action-list .mat-list-item:focus{outline:dotted 1px}.cdk-high-contrast-active .mat-list-single-selected-option::after{content:"";position:absolute;top:50%;right:16px;transform:translateY(-50%);width:10px;height:0;border-bottom:solid 10px;border-radius:10px}.cdk-high-contrast-active [dir=rtl] .mat-list-single-selected-option::after{right:auto;left:16px}@media(hover: none){.mat-list-option:not(.mat-list-single-selected-option):not(.mat-list-item-disabled):hover,.mat-nav-list .mat-list-item:not(.mat-list-item-disabled):hover,.mat-action-list .mat-list-item:not(.mat-list-item-disabled):hover{background:none}}
+</style><style>[_nghost-material-docs-c124]{font-size:13px;width:19%;position:sticky;top:0;padding-left:25px;box-sizing:border-box;display:inline-flex;flex-direction:column}.docs-toc-container[_ngcontent-material-docs-c124]{width:100%;padding:5px 0 10px 10px}.docs-toc-container[_ngcontent-material-docs-c124] + .docs-toc-container[_ngcontent-material-docs-c124]{padding-top:8px}.docs-toc-heading[_ngcontent-material-docs-c124]{margin:0;padding:0;font-size:13px;font-weight:700;text-transform:capitalize}a[_ngcontent-material-docs-c124]{line-height:16px;margin:8px 0 0;position:relative;text-decoration:none;display:block;text-overflow:ellipsis;width:100%;overflow:hidden}.docs-level-h4[_ngcontent-material-docs-c124]{margin-left:12px}</style></head>
+
+<body class="docs-app-background">
+<material-docs-app ng-version="12.0.0"><app-navbar class="mat-elevation-z6" _nghost-material-docs-c46=""><nav _ngcontent-material-docs-c46="" aria-label="Top Toolbar" class="docs-navbar-header"><div _ngcontent-material-docs-c46="" class="skip-link-wrapper cdk-visually-hidden ng-star-inserted"><a _ngcontent-material-docs-c46="" mat-raised-button="" color="accent" class="mat-focus-indicator mat-raised-button mat-button-base mat-accent" href="/components/dialog/api#component-viewer" tabindex="0" aria-disabled="false"><span class="mat-button-wrapper"> Skip to main content </span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a></div><!----><a _ngcontent-material-docs-c46="" mat-button="" routerlink="/" aria-label="Angular Material" class="mat-focus-indicator docs-button mat-button mat-button-base" tabindex="0" aria-disabled="false" href="/"><span class="mat-button-wrapper"><img _ngcontent-material-docs-c46="" src="../../../assets/img/homepage/angular-white-transparent.svg" alt="angular" class="docs-angular-logo"><span _ngcontent-material-docs-c46="">Material</span></span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><a _ngcontent-material-docs-c46="" mat-button="" class="mat-focus-indicator docs-navbar-hide-small docs-button mat-button mat-button-base ng-star-inserted" tabindex="0" aria-disabled="false" href="/components"><span class="mat-button-wrapper">组件</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><a _ngcontent-material-docs-c46="" mat-button="" class="mat-focus-indicator docs-navbar-hide-small docs-button mat-button mat-button-base ng-star-inserted" tabindex="0" aria-disabled="false" href="/cdk"><span class="mat-button-wrapper">组件开发包</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><!----><a _ngcontent-material-docs-c46="" mat-button="" routerlink="guides" class="mat-focus-indicator docs-navbar-hide-small docs-button mat-button mat-button-base" tabindex="0" aria-disabled="false" href="/guides"><span class="mat-button-wrapper">指南</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><div _ngcontent-material-docs-c46="" class="flex-spacer"></div><version-picker _ngcontent-material-docs-c46=""><button aria-haspopup="true" mat-button="" aria-label="Select a version" mattooltip="选择文档版本" class="mat-focus-indicator mat-tooltip-trigger mat-menu-trigger mat-button mat-button-base" aria-describedby="cdk-describedby-message-0" cdk-describedby-host=""><span class="mat-button-wrapper"> 12.0.1 <mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">arrow_drop_down</mat-icon></span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></button><!----><mat-menu class="ng-tns-c37-0"><!----></mat-menu></version-picker><theme-picker _ngcontent-material-docs-c46=""><button aria-haspopup="true" mat-icon-button="" aria-label="Select a theme" mattooltip="选择文档的主题" class="mat-focus-indicator mat-tooltip-trigger mat-menu-trigger mat-icon-button mat-button-base" aria-describedby="cdk-describedby-message-1" cdk-describedby-host=""><span class="mat-button-wrapper"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">format_color_fill</mat-icon></span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></button><!----><mat-menu xposition="before" class=""><!----></mat-menu></theme-picker><a _ngcontent-material-docs-c46="" mat-button="" href="https://github.com/ng-docs/components" target="_blank" aria-label="GitHub Repository" class="mat-focus-indicator docs-button docs-navbar-hide-small mat-button mat-button-base" tabindex="0" aria-disabled="false"><span class="mat-button-wrapper"><img _ngcontent-material-docs-c46="" src="../../../assets/img/homepage/github-circle-white-transparent.svg" alt="angular" class="docs-angular-logo"> GitHub </span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><a _ngcontent-material-docs-c46="" mat-icon-button="" href="https://github.com/angular/components" aria-label="GitHub Repository" class="mat-focus-indicator docs-button docs-navbar-show-small mat-icon-button mat-button-base" tabindex="0" aria-disabled="false"><span class="mat-button-wrapper"><img _ngcontent-material-docs-c46="" src="../../../assets/img/homepage/github-circle-white-transparent.svg" alt="angular" class="docs-angular-logo"></span><span matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></span><span class="mat-button-focus-overlay"></span></a></nav><nav _ngcontent-material-docs-c46="" aria-label="Section Nav Bar" class="docs-navbar docs-navbar-show-small"><a _ngcontent-material-docs-c46="" mat-button="" class="mat-focus-indicator docs-navbar-link mat-button mat-button-base ng-star-inserted" tabindex="0" aria-disabled="false" href="/components"><span class="mat-button-wrapper">组件</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><a _ngcontent-material-docs-c46="" mat-button="" class="mat-focus-indicator docs-navbar-link mat-button mat-button-base ng-star-inserted" tabindex="0" aria-disabled="false" href="/cdk"><span class="mat-button-wrapper">组件开发包</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a><!----><a _ngcontent-material-docs-c46="" mat-button="" routerlink="guides" class="mat-focus-indicator docs-navbar-link mat-button mat-button-base" tabindex="0" aria-disabled="false" href="/guides"><span class="mat-button-wrapper">指南</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></a></nav></app-navbar><router-outlet></router-outlet><app-component-sidenav class="ng-star-inserted"><mat-sidenav-container class="mat-drawer-container mat-sidenav-container docs-component-viewer-sidenav-container"><div class="mat-drawer-backdrop ng-star-inserted"></div><!----><!----><mat-sidenav-content cdkscrollable="" class="mat-drawer-content mat-sidenav-content ng-star-inserted"><div class="docs-component-sidenav-content"><component-page-header _nghost-material-docs-c123=""><header _ngcontent-material-docs-c123="" class="docs-primary-header component-page-header"><button _ngcontent-material-docs-c123="" mat-button="" class="mat-focus-indicator sidenav-toggle mat-button mat-button-base"><span class="mat-button-wrapper"><mat-icon _ngcontent-material-docs-c123="" role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">menu</mat-icon></span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay"></span></button><h1 _ngcontent-material-docs-c123="">对话框 <small _ngcontent-material-docs-c123="">Dialog</small></h1></header></component-page-header><div class="docs-component-sidenav-inner-content"><main class="docs-component-sidenav-body-content"><app-component-nav class="ng-tns-c131-2 ng-star-inserted"><div class="docs-component-viewer-nav ng-tns-c131-2"><div class="docs-component-viewer-nav-content ng-tns-c131-2 ng-star-inserted"><mat-nav-list role="navigation" class="mat-nav-list mat-list-base ng-tns-c131-2"><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/autocomplete"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 自动完成&nbsp;<small>Autocomplete</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/badge"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 徽章&nbsp;<small>Badge</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/bottom-sheet"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 底部操作表&nbsp;<small>Bottom Sheet</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/button"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 按钮&nbsp;<small>Button</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/button-toggle"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 开关按钮&nbsp;<small>Button toggle</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/card"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 卡片&nbsp;<small>Card</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/checkbox"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 检查框&nbsp;<small>Checkbox</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/chips"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 纸片&nbsp;<small>Chips</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/datepicker"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 日期选择器&nbsp;<small>Datepicker</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted docs-component-viewer-sidenav-item-selected" aria-current="false" href="/components/dialog"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 对话框&nbsp;<small>Dialog</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/divider"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 分割器&nbsp;<small>Divider</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/expansion"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 可展开面板&nbsp;<small>Expansion Panel</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/form-field"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 表单字段&nbsp;<small>Form field</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/grid-list"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 网格列表&nbsp;<small>Grid list</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/icon"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 图标&nbsp;<small>Icon</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/input"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 输入框&nbsp;<small>Input</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/list"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 列表&nbsp;<small>List</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/menu"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 菜单&nbsp;<small>Menu</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/paginator"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 分页器&nbsp;<small>Paginator</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/progress-bar"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 进度条&nbsp;<small>Progress bar</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/progress-spinner"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 进度圈&nbsp;<small>Progress spinner</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/radio"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 单选按钮&nbsp;<small>Radio button</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/ripple"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 涟漪&nbsp;<small>Ripples</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/select"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 选择框&nbsp;<small>Select</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/sidenav"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 侧边栏&nbsp;<small>Sidenav</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/slide-toggle"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 滑块开关&nbsp;<small>Slide toggle</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/slider"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 滑杆&nbsp;<small>Slider</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/snack-bar"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 快餐栏&nbsp;<small>Snackbar</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/sort"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 排序头&nbsp;<small>Sort header</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/stepper"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 步进器&nbsp;<small>Stepper</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/table"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 表格&nbsp;<small>Table</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/tabs"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 选项卡&nbsp;<small>Tabs</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/toolbar"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 工具栏&nbsp;<small>Toolbar</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/tooltip"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 工具提示&nbsp;<small>Tooltip</small></div></a><a mat-list-item="" routerlinkactive="docs-component-viewer-sidenav-item-selected" class="mat-list-item mat-focus-indicator ng-tns-c131-2 ng-star-inserted" aria-current="false" href="/components/tree"><div class="mat-list-item-content"><div mat-ripple="" class="mat-ripple mat-list-item-ripple"></div><div class="mat-list-text"></div> 树&nbsp;<small>Tree</small></div></a><!----></mat-nav-list></div><!----></div></app-component-nav><!----><router-outlet></router-outlet><app-component-viewer class="ng-star-inserted"><div class="docs-component-viewer"><nav mat-tab-nav-bar="" aria-label="Documentation Sections" id="component-viewer" focusonnavigation="" class="mat-tab-nav-bar mat-tab-header docs-component-viewer-tabbed-content mat-primary" tabindex="-1" style="outline: none;"><div aria-hidden="true" mat-ripple="" class="mat-ripple mat-tab-header-pagination mat-tab-header-pagination-before mat-elevation-z4 mat-tab-header-pagination-disabled"><div class="mat-tab-header-pagination-chevron"></div></div><div class="mat-tab-link-container"><div class="mat-tab-list" style="transform: translateX(0px);"><div class="mat-tab-links"><a mat-tab-link="" routerlinkactive="" class="mat-tab-link mat-focus-indicator docs-component-viewer-section-tab ng-star-inserted" href="/components/dialog/overview" aria-disabled="false" tabindex="0">概览</a><a mat-tab-link="" routerlinkactive="" class="mat-tab-link mat-focus-indicator docs-component-viewer-section-tab ng-star-inserted mat-tab-label-active" href="/components/dialog/api" aria-disabled="false" tabindex="0" aria-current="page">API</a><a mat-tab-link="" routerlinkactive="" class="mat-tab-link mat-focus-indicator docs-component-viewer-section-tab ng-star-inserted" href="/components/dialog/examples" aria-disabled="false" tabindex="0">范例</a><!----></div><mat-ink-bar class="mat-ink-bar" style="visibility: visible; left: 160px; width: 160px;"></mat-ink-bar></div></div><div aria-hidden="true" mat-ripple="" class="mat-ripple mat-tab-header-pagination mat-tab-header-pagination-after mat-elevation-z4 mat-tab-header-pagination-disabled"><div class="mat-tab-header-pagination-chevron"></div></div></nav><div class="docs-component-viewer-content"><router-outlet></router-outlet><component-api class="ng-star-inserted"><span tabindex="-1" class="cdk-visually-hidden ng-star-inserted"> dialog 的 API </span><div class="docs-component-api ng-star-inserted"><doc-viewer class="docs-component-view-text-content"><div class="docs-api">
+  <h2 id="angular-material-dialog-api-参考文档">
+    Angular Material dialog API 参考文档
+  </h2>
+
+  <p class="docs-api-module-import">
+    <code>
+      import {MatDialogModule} from '@angular/material/dialog';
+    </code>
+  </p><h3 id="material-dialog-services" class="docs-header-link docs-api-h3">
+      <span header-link="services"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#services" aria-describedby="services"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+      服务
+    </h3>
+    
+      
+
+<h4 id="MatDialog" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatDialog"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#MatDialog" aria-describedby="MatDialog"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+  <code>MatDialog</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">用于打开 Material Design 模态对话框的服务。</p><p translation-origin="off">Service to open Material Design modal dialogs.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>afterAllClosed: Observable&lt;void&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当所有打开的对话框都关闭的时候会发出通知的流。如果没有打开的对话框，就会在订阅时立即触发。</p><p translation-origin="off">Stream that emits when all open dialog have finished closing.
+Will emit on subscribe if there are no open dialogs to begin with.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>afterOpened: Subject&lt;MatDialogRef&lt;any&gt;&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当对话框打开后会发出通知的流。</p><p translation-origin="off">Stream that emits when a dialog has been opened.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>openDialogs: MatDialogRef&lt;any&gt;[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">跟踪当前打开的对话框。</p><p translation-origin="off">Keeps track of the currently-open dialogs.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">closeAll
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">关闭所有当前打开的对话框。</p><p translation-origin="off">Closes all of the currently-open dialogs.</p>
+
+
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getDialogById
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">通过 id 查找一个打开的对话框。</p><p translation-origin="off">Finds an open dialog by its id.</p>
+
+<p translation-result="on">在查找对话框时要用到的 ID。</p><p translation-origin="off">@param id ID to use when looking up the dialog.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        id</p>
+      <code class="docs-api-method-parameter-type">string</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatDialogRef&lt;any&gt; | undefined</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">open
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">打开一个包含指定组件的模态对话框。</p><p translation-origin="off">Opens a modal dialog containing the given component.</p>
+
+<p translation-result="on">要加载到对话框中的组件类型。</p><p translation-origin="off">@param component Type of the component to load into the dialog.</p>
+
+<p translation-result="on">额外的配置选项。</p><p translation-origin="off">@param config Extra configuration options.</p>
+
+<p translation-result="on">引用新打开的对话框。</p><p translation-origin="off">@returns Reference to the newly-opened dialog.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        component</p>
+      <code class="docs-api-method-parameter-type">ComponentType&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        config<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">MatDialogConfig&lt;D&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatDialogRef&lt;T, R&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p translation-result="on">引用新打开的对话框。</p><p translation-origin="off">Reference to the newly-opened dialog.</p>
+
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">open
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">打开一个包含指定模板的模态对话框。</p><p translation-origin="off">Opens a modal dialog containing the given template.</p>
+
+<p translation-result="on">TemplateRef 要实例化为对话框内容。</p><p translation-origin="off">@param template TemplateRef to instantiate as the dialog content.</p>
+
+<p translation-result="on">额外的配置选项。</p><p translation-origin="off">@param config Extra configuration options.</p>
+
+<p translation-result="on">引用新打开的对话框。</p><p translation-origin="off">@returns Reference to the newly-opened dialog.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        template</p>
+      <code class="docs-api-method-parameter-type">TemplateRef&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        config<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">MatDialogConfig&lt;D&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatDialogRef&lt;T, R&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p translation-result="on">引用新打开的对话框。</p><p translation-origin="off">Reference to the newly-opened dialog.</p>
+
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">open
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        template</p>
+      <code class="docs-api-method-parameter-type">ComponentType&lt;T&gt; | TemplateRef&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        config<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">MatDialogConfig&lt;D&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatDialogRef&lt;T, R&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-dialog-directives" class="docs-header-link docs-api-h3">
+      <span header-link="directives"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#directives" aria-describedby="directives"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+      指令
+    </h3>
+    
+      
+
+<h4 id="MatDialogClose" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatDialogClose"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#MatDialogClose" aria-describedby="MatDialogClose"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+  <code>MatDialogClose</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">该按钮用于关闭当前对话框。</p><p translation-origin="off">Button that will close the current dialog.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[mat-dialog-close]</span>
+  
+    <span class="docs-api-class-selector-name">[matDialogClose]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matDialogClose</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-1">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'aria-label'</span>)
+        </div><p class="docs-api-property-name">
+      <code>ariaLabel: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该按钮的屏幕阅读器标签。</p><p translation-origin="off">Screenreader label for the button.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">@Input(<span class="docs-api-input-alias">'mat-dialog-close'</span>)
+        </div><p class="docs-api-property-name">
+      <code>dialogResult: any</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对话框关闭的输入属性。</p><p translation-origin="off">Dialog close input.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>type: 'submit' | 'button' | 'reset'</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">默认为 “button” 以防止意外的表单提交。</p><p translation-origin="off">Default to "button" to prevents accidental form submits.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>dialogRef: MatDialogRef&lt;any&gt;</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatDialogTitle" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatDialogTitle"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#MatDialogTitle" aria-describedby="MatDialogTitle"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+  <code>MatDialogTitle</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">该对话框元素的标头。当滚动时，它会固定在对话框的顶部。</p><p translation-origin="off">Title of a dialog element. Stays fixed to the top of the dialog when scrolling.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[mat-dialog-title]</span>
+  
+    <span class="docs-api-class-selector-name">[matDialogTitle]</span>
+  
+</div><span class="docs-api-class-export-label">导出为：</span>
+<span class="docs-api-class-export-name">matDialogTitle</span><h5 class="docs-api-h5 docs-api-method-header" id="属性-2">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><div class="docs-api-input-marker">
+          @Input()</div><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatDialogContent" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatDialogContent"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#MatDialogContent" aria-describedby="MatDialogContent"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+  <code>MatDialogContent</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">对话框的可滚动内容容器。</p><p translation-origin="off">Scrollable content container of a dialog.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[mat-dialog-content]</span>
+  
+    <span class="docs-api-class-selector-name">mat-dialog-content</span>
+  
+    <span class="docs-api-class-selector-name">[matDialogContent]</span>
+  
+</div>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatDialogActions" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatDialogActions"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#MatDialogActions" aria-describedby="MatDialogActions"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+  <code>MatDialogActions</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">对话框中底部操作按钮的容器。当滚动时，它会固定在底部。</p><p translation-origin="off">Container for the bottom action buttons in a dialog.
+Stays fixed to the bottom when scrolling.</p>
+
+</div><div class="docs-api-directive-selectors">
+  <span class="docs-api-class-selector-label">选择器：</span>
+  
+    <span class="docs-api-class-selector-name">[mat-dialog-actions]</span>
+  
+    <span class="docs-api-class-selector-name">mat-dialog-actions</span>
+  
+    <span class="docs-api-class-selector-name">[matDialogActions]</span>
+  
+</div>
+
+
+
+
+
+
+    <h3 id="material-dialog-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#classes" aria-describedby="classes"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="MatDialogConfig" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatDialogConfig"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#MatDialogConfig" aria-describedby="MatDialogConfig"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+  <code>MatDialogConfig</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">使用 MatDialog 服务打开的模态对话框的配置</p><p translation-origin="off">Configuration for opening a modal dialog with the MatDialog service.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-3">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ariaDescribedBy: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">描述该对话框元素的 ID。</p><p translation-origin="off">ID of the element that describes the dialog.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ariaLabel: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要分配给对话框元素的 Aria 标签。</p><p translation-origin="off">Aria label to assign to the dialog element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>ariaLabelledBy: string | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">标记该对话框的元素的 ID。</p><p translation-origin="off">ID of the element that labels the dialog.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>autoFocus: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">打开对话框时是否应该让第一个可获取焦点的元素获得焦点。</p><p translation-origin="off">Whether the dialog should focus the first focusable element on open.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>backdropClass: string | string[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">背景板的自定义类。</p><p translation-origin="off">Custom class for the backdrop.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>closeOnNavigation: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">当用户在历史记录中后退时，该对话框是否会关闭。请注意，这通常不包括单击链接（除非用户正在使用 <code>HashLocationStrategy</code> ）。</p><p translation-origin="off">Whether the dialog should close when the user goes backwards/forwards in history.
+Note that this usually doesn't include clicking on links (unless the user is using
+the <code>HashLocationStrategy</code>).</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>componentFactoryResolver: ComponentFactoryResolver</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">备用 <code>ComponentFactoryResolver</code>，用于解析其关联组件。</p><p translation-origin="off">Alternate <code>ComponentFactoryResolver</code> to use when resolving the associated component.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>data: D | null</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">要注入到子组件中的数据。</p><p translation-origin="off">Data being injected into the child component.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>direction: Direction</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对话框内容的布局方向</p><p translation-origin="off">Layout direction for the dialog's content.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableClose: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用户是否可以使用 escape 或单击背景板来关闭该模态框。</p><p translation-origin="off">Whether the user can use escape or clicking on the backdrop to close the modal.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>hasBackdrop: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对话框是否有背景板。</p><p translation-origin="off">Whether the dialog has a backdrop.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>height: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该对话框的高度。</p><p translation-origin="off">Height of the dialog.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该对话框的 ID。如果省略，就会生成一个唯一的。</p><p translation-origin="off">ID for the dialog. If omitted, a unique one will be generated.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>maxHeight: number | string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对话框的最大高度。如果提供了数字，则假设单位是像素。</p><p translation-origin="off">Max-height of the dialog. If a number is provided, assumes pixel units.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>maxWidth: number | string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对话框的最大宽度。如果提供了数字，则假设单位是像素。默认为 80vw。</p><p translation-origin="off">Max-width of the dialog. If a number is provided, assumes pixel units. Defaults to 80vw.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>minHeight: number | string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对话框的最小高度。如果提供了数字，则假设单位是像素。</p><p translation-origin="off">Min-height of the dialog. If a number is provided, assumes pixel units.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>minWidth: number | string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">对话框的最小宽度。如果提供了数字，则假设单位是像素。</p><p translation-origin="off">Min-width of the dialog. If a number is provided, assumes pixel units.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>panelClass: string | string[]</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">浮层面板的自定义类。</p><p translation-origin="off">Custom class for the overlay pane.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>position: DialogPosition</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">位置改写。</p><p translation-origin="off">Position overrides.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>restoreFocus: boolean</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该对话框是否应该在关闭之前将焦点还给以前拥有焦点的元素。</p><p translation-origin="off">Whether the dialog should restore focus to the
+previously-focused element, after it's closed.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>role: DialogRole</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该对话框元素的 ARIA 角色。</p><p translation-origin="off">The ARIA role of the dialog element.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>scrollStrategy: ScrollStrategy</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">用于对话框的滚动策略。</p><p translation-origin="off">Scroll strategy to be used for the dialog.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>viewContainerRef: ViewContainerRef</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">附加到组件应该位于 Angular 的<em>逻辑</em>组件树中。这会影响注入时的可用内容以及在对话框中实例化的组件的变更检测顺序。这不会影响对象内容的渲染位置。</p><p translation-origin="off">Where the attached component should live in Angular's <em>logical</em> component tree.
+This affects what is available for injection and the change detection order for the
+component instantiated inside of the dialog. This does not affect where the dialog
+content will be rendered.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>width: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">该对话框的宽度。</p><p translation-origin="off">Width of the dialog.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    
+      
+
+<h4 id="MatDialogRef" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatDialogRef"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#MatDialogRef" aria-describedby="MatDialogRef"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+  <code>MatDialogRef</code>
+  
+</h4><div class="docs-api-class-description"><p translation-result="on">通过 MatDialog 服务打开的对话框的引用。</p><p translation-origin="off">Reference to a dialog opened via the MatDialog service.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-4">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>componentInstance: T</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">在对话框中打开的组件实例。</p><p translation-origin="off">The instance of component opened into the dialog.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>disableClose: boolean | undefined</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">是否允许用户关闭该对话框。</p><p translation-origin="off">Whether the user is allowed to close the dialog.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>id: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"></td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法-1">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">addPanelClass
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">把一个或一组 CSS 类添加到浮层面板中。</p><p translation-origin="off">Add a CSS class or an array of classes to the overlay pane.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        classes</p>
+      <code class="docs-api-method-parameter-type">string | string[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">afterClosed
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个会在对话框关闭后收到通知的可观察对象。</p><p translation-origin="off">Gets an observable that is notified when the dialog is finished closing.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;R | undefined&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">afterOpened
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个会在对话框打开后得到通知的可观察对象。</p><p translation-origin="off">Gets an observable that is notified when the dialog is finished opening.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">backdropClick
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个可观察对象，它会在点击浮层的背景板时发出。</p><p translation-origin="off">Gets an observable that emits when the overlay's backdrop has been clicked.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;MouseEvent&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">beforeClosed
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个当对话框即将关闭时得到通知的可观察对象。</p><p translation-origin="off">Gets an observable that is notified when the dialog has started closing.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;R | undefined&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">close
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">关闭对话框。</p><p translation-origin="off">Close the dialog.</p>
+
+<p translation-result="on">返回到窗口对话框的可选结果。</p><p translation-origin="off">@param dialogResult Optional result to return to the dialog opener.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        dialogResult<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">R</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">getState
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取对话框生命周期的当前状态。</p><p translation-origin="off">Gets the current state of the dialog's lifecycle.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">MatDialogState</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">keydownEvents
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个可观察对象，当 keydown 事件的目标是浮层时发出数据。</p><p translation-origin="off">Gets an observable that emits when keydown events are targeted on the overlay.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Observable&lt;KeyboardEvent&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">removePanelClass
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">从浮层面板中删除一个或一组 CSS 类。</p><p translation-origin="off">Remove a CSS class or an array of classes from the overlay pane.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        classes</p>
+      <code class="docs-api-method-parameter-type">string | string[]</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updatePosition
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">更新对话框的位置。</p><p translation-origin="off">Updates the dialog's position.</p>
+
+<p translation-result="on">新对话框位置。</p><p translation-origin="off">@param position New dialog position.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        position<span class="docs-api-method-parameter-optional-marker">?</span></p>
+      <code class="docs-api-method-parameter-type">DialogPosition</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell">updateSize
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">更新对话框的宽度和高度。</p><p translation-origin="off">Updates the dialog's width and height.</p>
+
+<p translation-result="on">对话框的新宽度。</p><p translation-origin="off">@param width New width of the dialog.</p>
+
+<p translation-result="on">对话框的新高度。</p><p translation-origin="off">@param height New height of the dialog.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        width</p>
+      <code class="docs-api-method-parameter-type">string = ''</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  
+  <tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        height</p>
+      <code class="docs-api-method-parameter-type">string = ''</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">this</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-dialog-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#interfaces" aria-describedby="interfaces"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="DialogPosition" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="DialogPosition"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#DialogPosition" aria-describedby="DialogPosition"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+  <code>DialogPosition</code>
+</h4><div class="docs-api-interface-description"><p translation-result="on">可改写的对话框位置。</p><p translation-origin="off">Possible overrides for a dialog's position.</p>
+
+</div><h5 class="docs-api-h5 docs-api-method-header" id="属性-5">属性</h5>
+  <table class="docs-api-properties-table">
+    <tbody><tr class="docs-api-properties-header-row">
+      <th class="docs-api-properties-th">名称</th>
+      <th class="docs-api-properties-th">描述</th>
+    </tr>
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>bottom: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">改写对话框的底部位置。</p><p translation-origin="off">Override for the dialog's bottom position.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>left: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">改写对话框的左侧位置。</p><p translation-origin="off">Override for the dialog's left position.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>right: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">改写对话框的右侧位置。</p><p translation-origin="off">Override for the dialog's right position.</p>
+
+</td>
+</tr>
+
+
+    
+      
+
+<tr class="docs-api-properties-row">
+  <td class="docs-api-properties-name-cell"><p class="docs-api-property-name">
+      <code>top: string</code>
+    </p>
+  </td>
+  <td class="docs-api-property-description"><p translation-result="on">改写对话框的顶部位置。</p><p translation-origin="off">Override for the dialog's top position.</p>
+
+</td>
+</tr>
+
+
+    
+  </tbody></table>
+
+
+
+
+
+
+    <h3 id="material-dialog-type_aliases" class="docs-header-link docs-api-h3">
+      <span header-link="type_aliases"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#type_aliases" aria-describedby="type_aliases"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+      类型别名
+    </h3>
+    
+      
+
+<h4 id="DialogRole" class="docs-header-link docs-api-h4 docs-api-type-alias-name">
+  <span header-link="DialogRole"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#DialogRole" aria-describedby="DialogRole"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+  <code>DialogRole</code>
+</h4><div class="docs-api-type-alias-description"><p translation-result="on">对话框元素的有效 ARIA 角色。</p><p translation-origin="off">Valid ARIA roles for a dialog element.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">type</span> DialogRole = <span class="hljs-string">'dialog'</span> | <span class="hljs-string">'alertdialog'</span>;</code>
+</pre>
+</div>
+
+
+    <h3 id="material-dialog-constants" class="docs-header-link docs-api-h3">
+      <span header-link="constants"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#constants" aria-describedby="constants"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+      常量
+    </h3>
+    
+      
+
+<h4 id="MAT_DIALOG_DATA" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_DIALOG_DATA"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#MAT_DIALOG_DATA" aria-describedby="MAT_DIALOG_DATA"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+  <code>MAT_DIALOG_DATA</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌可以用来访问那些传入对话框的数据。</p><p translation-origin="off">Injection token that can be used to access the data that was passed in to a dialog.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_DIALOG_DATA: InjectionToken&lt;<span class="hljs-built_in">any</span>&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_DIALOG_DEFAULT_OPTIONS" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_DIALOG_DEFAULT_OPTIONS"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#MAT_DIALOG_DEFAULT_OPTIONS" aria-describedby="MAT_DIALOG_DEFAULT_OPTIONS"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+  <code>MAT_DIALOG_DEFAULT_OPTIONS</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">这个注入令牌可以用来指定默认的对话框选项。</p><p translation-origin="off">Injection token that can be used to specify default dialog options.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_DIALOG_DEFAULT_OPTIONS: InjectionToken&lt;MatDialogConfig&lt;<span class="hljs-built_in">any</span>&gt;&gt;;</code>
+</pre>
+</div>
+
+
+    
+      
+
+<h4 id="MAT_DIALOG_SCROLL_STRATEGY" class="docs-header-link docs-api-h4 docs-api-constant-name">
+  <span header-link="MAT_DIALOG_SCROLL_STRATEGY"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#MAT_DIALOG_SCROLL_STRATEGY" aria-describedby="MAT_DIALOG_SCROLL_STRATEGY"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+  <code>MAT_DIALOG_SCROLL_STRATEGY</code>
+</h4><div class="docs-api-constant-description"><p translation-result="on">一个注入令牌，它在对话框打开时确定滚动的处理方式。</p><p translation-origin="off">Injection token that determines the scroll handling while the dialog is open.</p>
+
+</div><div class="docs-markdown">
+<pre class="docs-markdown-pre"><code class="docs-markdown-code"><span class="hljs-keyword">const</span> MAT_DIALOG_SCROLL_STRATEGY: InjectionToken&lt;<span class="hljs-function">() =&gt;</span> ScrollStrategy&gt;;</code>
+</pre>
+</div>
+
+
+    </div>
+</doc-viewer><!----><doc-viewer class="docs-component-view-text-content ng-star-inserted"><div class="docs-api">
+  <h2 id="angular-material-dialog-testing-api-参考文档">
+    Angular Material dialog-testing API 参考文档
+  </h2>
+
+  <p class="docs-api-module-import">
+    <code>
+      import {MatDialogHarness} from '@angular/material/dialog/testing';
+    </code>
+  </p><h3 id="material-dialog-testing-classes" class="docs-header-link docs-api-h3">
+      <span header-link="classes"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#classes" aria-describedby="classes"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+      类
+    </h3>
+    
+      
+
+<h4 id="MatDialogHarness" class="docs-header-link docs-api-h4 docs-api-class-name">
+  <span header-link="MatDialogHarness"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#MatDialogHarness" aria-describedby="MatDialogHarness"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+  <code>MatDialogHarness</code>
+  
+  <span class="docs-api-class-extends-clauses">
+    <span class="docs-api-class-extends-label">extends</span>
+    <a href="cdk/testing/api#ContentContainerComponentHarness" class="docs-api-class-extends-type">
+      ContentContainerComponentHarness
+    </a>
+  </span>
+  
+</h4><div class="docs-api-class-description"><p>Harness for interacting with a standard <code>MatDialog</code> in tests.</p>
+</div>
+
+
+<h5 class="docs-api-h5 docs-api-method-header" id="方法">方法</h5>
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>close
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Closes the dialog by pressing escape.</p>
+<p>Note: this method does nothing if <code>disableClose</code> has been set to <code>true</code> for the dialog.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;void&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        <p>Promise that resolves when the action completes.</p>
+
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getAllChildLoaders
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        selector</p>
+      <code class="docs-api-method-parameter-type">S</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getAllHarnesses
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        query</p>
+      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;T[]&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getAriaDescribedby
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the value of the dialog's "aria-describedby" attribute.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getAriaLabel
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the value of the dialog's "aria-label" attribute.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getAriaLabelledby
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the value of the dialog's "aria-labelledby" attribute.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getChildLoader
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        selector</p>
+      <code class="docs-api-method-parameter-type">S</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;HarnessLoader&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getHarness
+      </th>
+    </tr>
+  </thead><thead>
+    <tr class="docs-api-method-parameters-header-row">
+      <th colspan="2" class="docs-api-method-parameters-header-cell"><p translation-result="on">参数</p><p translation-origin="off">Parameters</p></th>
+    </tr>
+    
+  </thead>
+  
+  <tbody><tr class="docs-api-method-parameter-row">
+    <td class="docs-api-method-parameter-cell">
+      <p class="docs-api-method-parameter-name">
+        query</p>
+      <code class="docs-api-method-parameter-type">HarnessQuery&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-parameter-description-cell">
+      <div class="docs-api-method-parameter-description">
+        
+      </div>
+    </td>
+  </tr>
+  </tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;T&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getId
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the id of the dialog.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;string | null&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>getRole
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p>Gets the role of the dialog.</p>
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;DialogRole | null&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+    
+
+<table class="docs-api-method-table">
+  <thead>
+    <tr class="docs-api-method-name-row">
+      <th colspan="2" class="docs-api-method-name-cell"><div class="docs-api-async-method-marker">
+          异步
+        </div>host
+      </th>
+    </tr>
+  </thead><tbody><tr class="docs-api-method-description-row">
+    <td colspan="2" class="docs-api-method-description-cell">
+      <p translation-result="on">获取一个代表该组件宿主元素的 <code>TestElement</code>  型 <code>Promise</code>。</p><p translation-origin="off">Gets a <code>Promise</code> for the <code>TestElement</code> representing the host element of the component.</p>
+
+
+    </td>
+  </tr></tbody><thead>
+    <tr class="docs-api-method-returns-header-row">
+        <th colspan="2" class="docs-api-method-returns-header-cell"><p translation-result="on">返回值</p><p translation-origin="off">Returns</p></th>
+    </tr>
+    
+  </thead>
+  <tbody><tr>
+    <td class="docs-api-method-returns-type-cell">
+      <code class="docs-api-method-returns-type">Promise&lt;TestElement&gt;</code>
+    </td>
+    <td class="docs-api-method-returns-description-cell">
+      <div class="docs-api-method-returns-description">
+        
+      </div>
+    </td>
+  </tr></tbody></table>
+
+
+  
+
+
+
+    <h3 id="material-dialog-testing-interfaces" class="docs-header-link docs-api-h3">
+      <span header-link="interfaces"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#interfaces" aria-describedby="interfaces"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+      接口
+    </h3>
+    
+      
+
+<h4 id="DialogHarnessFilters" class="docs-header-link docs-api-h4 docs-api-interface-name">
+  <span header-link="DialogHarnessFilters"><header-link class="ng-star-inserted"><a aria-label="Link to this heading" class="docs-markdown-a" href="/components/dialog/api#DialogHarnessFilters" aria-describedby="DialogHarnessFilters"><mat-icon role="img" class="mat-icon notranslate material-icons mat-icon-no-color" aria-hidden="true" data-mat-icon-type="font">link</mat-icon></a></header-link></span>
+  <code>DialogHarnessFilters</code>
+</h4><div class="docs-api-interface-description"><p>A set of criteria that can be used to filter a list of <code>MatDialogHarness</code> instances.</p>
+</div>
+
+
+
+
+
+
+    </div>
+</doc-viewer><!----><!----></div><table-of-contents container=".mat-drawer-content" _nghost-material-docs-c124="" class="ng-star-inserted"><div _ngcontent-material-docs-c124="" class="docs-toc-container ng-star-inserted"><div _ngcontent-material-docs-c124="" class="docs-toc-heading">对话框 API 目录</div><nav _ngcontent-material-docs-c124="" aria-label="对话框 API 目录目录"><a _ngcontent-material-docs-c124="" class="docs-level-h3 docs-link ng-star-inserted" href="/components/dialog/api#material-dialog-services"> 服务 </a><a _ngcontent-material-docs-c124="" class="docs-level-h4 docs-link ng-star-inserted" href="/components/dialog/api#MatDialog"> MatDialog </a><a _ngcontent-material-docs-c124="" class="docs-level-h3 docs-link ng-star-inserted" href="/components/dialog/api#material-dialog-directives"> 指令 </a><a _ngcontent-material-docs-c124="" class="docs-level-h4 docs-link ng-star-inserted" href="/components/dialog/api#MatDialogClose"> MatDialogClose </a><a _ngcontent-material-docs-c124="" class="docs-level-h4 docs-link ng-star-inserted" href="/components/dialog/api#MatDialogTitle"> MatDialogTitle </a><a _ngcontent-material-docs-c124="" class="docs-level-h4 docs-link ng-star-inserted" href="/components/dialog/api#MatDialogContent"> MatDialogContent </a><a _ngcontent-material-docs-c124="" class="docs-level-h4 docs-link ng-star-inserted" href="/components/dialog/api#MatDialogActions"> MatDialogActions </a><a _ngcontent-material-docs-c124="" class="docs-level-h3 docs-link ng-star-inserted" href="/components/dialog/api#material-dialog-classes"> 类 </a><a _ngcontent-material-docs-c124="" class="docs-level-h4 docs-link ng-star-inserted" href="/components/dialog/api#MatDialogConfig"> MatDialogConfig </a><a _ngcontent-material-docs-c124="" class="docs-level-h4 docs-link ng-star-inserted" href="/components/dialog/api#MatDialogRef"> MatDialogRef </a><a _ngcontent-material-docs-c124="" class="docs-level-h3 docs-link ng-star-inserted" href="/components/dialog/api#material-dialog-interfaces"> 接口 </a><a _ngcontent-material-docs-c124="" class="docs-level-h4 docs-link ng-star-inserted" href="/components/dialog/api#DialogPosition"> DialogPosition </a><a _ngcontent-material-docs-c124="" class="docs-level-h3 docs-link ng-star-inserted" href="/components/dialog/api#material-dialog-type_aliases"> 类型别名 </a><a _ngcontent-material-docs-c124="" class="docs-level-h4 docs-link ng-star-inserted" href="/components/dialog/api#DialogRole"> DialogRole </a><a _ngcontent-material-docs-c124="" class="docs-level-h3 docs-link ng-star-inserted" href="/components/dialog/api#material-dialog-constants"> 常量 </a><a _ngcontent-material-docs-c124="" class="docs-level-h4 docs-link ng-star-inserted" href="/components/dialog/api#MAT_DIALOG_DATA"> MAT_DIALOG_DATA </a><a _ngcontent-material-docs-c124="" class="docs-level-h4 docs-link ng-star-inserted" href="/components/dialog/api#MAT_DIALOG_DEFAULT_OPTIONS"> MAT_DIALOG_DEFAULT_OPTIONS </a><a _ngcontent-material-docs-c124="" class="docs-level-h4 docs-link ng-star-inserted" href="/components/dialog/api#MAT_DIALOG_SCROLL_STRATEGY"> MAT_DIALOG_SCROLL_STRATEGY </a><!----></nav></div><div _ngcontent-material-docs-c124="" class="docs-toc-container ng-star-inserted"><div _ngcontent-material-docs-c124="" class="docs-toc-heading">Testing</div><nav _ngcontent-material-docs-c124="" aria-label="Testing目录"><a _ngcontent-material-docs-c124="" class="docs-level-h3 docs-link ng-star-inserted" href="/components/dialog/api#material-dialog-testing-classes"> 类 </a><a _ngcontent-material-docs-c124="" class="docs-level-h4 docs-link ng-star-inserted" href="/components/dialog/api#MatDialogHarness"> MatDialogHarness extends ContentContainerComponentHarness </a><a _ngcontent-material-docs-c124="" class="docs-level-h3 docs-link ng-star-inserted" href="/components/dialog/api#material-dialog-testing-interfaces"> 接口 </a><a _ngcontent-material-docs-c124="" class="docs-level-h4 docs-link ng-star-inserted" href="/components/dialog/api#DialogHarnessFilters"> DialogHarnessFilters </a><!----></nav></div><!----></table-of-contents><!----><!----><!----></component-api><!----></div></div></app-component-viewer><!----></main><app-footer _nghost-material-docs-c112=""><footer _ngcontent-material-docs-c112="" class="docs-footer"><div _ngcontent-material-docs-c112="" class="docs-footer-list"><div _ngcontent-material-docs-c112="" class="docs-footer-logo"><div _ngcontent-material-docs-c112="" class="footer-logo"><img _ngcontent-material-docs-c112="" src="../../../assets/img/homepage/angular-white-transparent.svg" alt="Angular icon" class="docs-footer-angular-logo"><span _ngcontent-material-docs-c112="" translation-result=""><a _ngcontent-material-docs-c112="" href="https://angular.cn">学习 Angular</a></span><span _ngcontent-material-docs-c112="" translation-origin="off"><a _ngcontent-material-docs-c112="" href="https://angular.io">Learn Angular</a></span></div></div><div _ngcontent-material-docs-c112="" class="docs-footer-version"><img _ngcontent-material-docs-c112="" src="../../../assets/img/angular-material-logo.svg" alt="Angular Material icon" class="angular-material-logo"><span _ngcontent-material-docs-c112="" translation-result="" class="version">当前版本：12.0.1</span><span _ngcontent-material-docs-c112="" translation-origin="off" class="version">Current Version: 12.0.1</span></div><div _ngcontent-material-docs-c112="" class="docs-footer-copyright"><div _ngcontent-material-docs-c112=""><span _ngcontent-material-docs-c112="">Powered by Google LLC ©2010-2021.</span><a _ngcontent-material-docs-c112="" href="https://github.com/angular/components/blob/master/LICENSE">Code licensed under an MIT-style License.</a><span _ngcontent-material-docs-c112="">Documentation licensed under CC BY 4.0.</span></div></div></div></footer></app-footer></div></div></mat-sidenav-content><!----></mat-sidenav-container></app-component-sidenav><!----></material-docs-app>
+<script>
+  // Note this is a customised version of the GA tracking snippet
+  // See the comments below for more info
+  (function (i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o),
+      m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    ~i.name.indexOf('NG_DEFER_BOOTSTRAP') || // only load library if not running e2e tests
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+</script>
+<script>
+  // This hides the address bar on mobile browsers
+  // https://developers.google.com/web/fundamentals/native-hardware/fullscreen/
+  window.addEventListener('load', function () {
+    window.scrollTo(0, 1);
+  });
+</script>
+<script src="assets/translator/js/hammer.min.js"></script>
+<script src="assets/translator/js/web-animations.min.js"></script>
+<script src="assets/translator/js/translator.js"></script>
+<script src="runtime-es2015.e1ec85b3eefc82b3e26e.js" type="module"></script><script src="runtime-es5.e1ec85b3eefc82b3e26e.js" nomodule="" defer=""></script><script src="polyfills-es5.35bff51a800c7976c976.js" nomodule="" defer=""></script><script src="polyfills-es2015.22817afc647088fa8911.js" type="module"></script><script src="main-es2015.f57b1187064a60cf3006.js" type="module"></script><script src="main-es5.f57b1187064a60cf3006.js" nomodule="" defer=""></script>
+
+<div class="cdk-live-announcer-element cdk-visually-hidden" aria-atomic="true" aria-live="polite"></div><div id="cdk-describedby-message-container" class="cdk-visually-hidden" style="visibility: hidden;"><div id="cdk-describedby-message-0" role="tooltip">选择文档版本</div><div id="cdk-describedby-message-1" role="tooltip">选择文档的主题</div></div></body></html>

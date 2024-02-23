@@ -1,0 +1,15 @@
+<h1 mat-dialog-title="" id="favorite-animal">Favorite Animal</h1>
+<div mat-dialog-content="">
+  My favorite animal is:
+  <ul>
+    <li>
+      <span *ngif="data.animal === 'panda'">✓</span> Panda
+    </li>
+    <li>
+      <span *ngif="data.animal === 'unicorn'">✓</span> Unicorn
+    </li>
+    <li>
+      <span *ngif="data.animal === 'lion'">✓</span> Lion
+    </li>
+  </ul>
+</div>
